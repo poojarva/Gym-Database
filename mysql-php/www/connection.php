@@ -25,7 +25,7 @@ if (!isset($_SESSION['username_id']))
     // If the page is receiving the email and password from the login form then verify the login data
     if (isset($_POST['email']) && isset($_POST['password']))
     {
-        $stmt = $conn->prepare("SELECT username_id, password FROM users WHERE email=:email");
+        $stmt = $conn->prepare("SELECT username_id, password FROM users WHERE email=:email and type like 'Member'");
         $stmt->bindValue(':email', $_POST['email']);
         $stmt->execute();
         
