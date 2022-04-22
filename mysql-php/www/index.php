@@ -1,10 +1,18 @@
 <html>
 <head>
-<title>CMSC 508</title>
+<title>HR database</title>
+<?php require_once('header.php'); ?>
 </head>
+
+<?php require_once('connection.php'); ?>
+
 <body>
-<ul>
-<li><a href="employees.php">List all employees</a></li>
-</ul>
+
+<div class="container-fluid mt-3 mb-3">
+    <ul>
+    	<li><a href="employees.php">Basic information about employees (read only)</a></li>    
+    </ul>
+</div>
+
 </body>
 </html>

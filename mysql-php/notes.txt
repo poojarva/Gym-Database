@@ -1,0 +1,32 @@
+TODO:
+
+Homepage:
+
+- Have a Member Portal Button
+- Have a Employee Portal Button
+- Have a Create Account Button
+
+CREATE ACCOUNT:
+- Page will ask First Name, Last Name, Email, Password, which Location they are signing up at (drop down), if Member or Employee (drop down)
+
+MEMBER PORTAL
+- Rent Locker button
+- User a Room button
+- Use a Court button
+- Use Equipment button
+- Train with a Trainer button
+- Book a class button
+- Member information button
+
+EMPLOYEE PORTAL
+- schedule button
+- rent locker button
+- use a room button
+- use a court button
+- employee information button
+
+
+TODO:
+1. Create the home page that has a button for member portal and employee portal
+2. Create the create account button
+3. Create the login for member (make sure that 
