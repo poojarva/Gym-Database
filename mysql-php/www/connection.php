@@ -36,11 +36,12 @@ if (!isset($_SESSION['username_id']))
         {
             // Create session variable
             $_SESSION['username_id'] = $queryResult['username_id'];
-            
+           
             // Redirect to URL
             header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
         } else {
             // Password mismatch
+            echo "No user found - Please try again.";
             require('login.php');
             exit();
         }
