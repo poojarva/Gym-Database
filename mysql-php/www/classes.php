@@ -96,7 +96,7 @@
 			    "data" => $dataTable
 			);
 			
-			echo json_encode($output);
+			echo ($output);
 			?>
 		</table>
 	</div>
