@@ -28,7 +28,7 @@
 	<h4>Classes</h4>
 	
 <!-- 	<div class="pb-3"> -->
-<!-- 	<button type="button" id="addClasses" class="btn btn-primary btn-sm">Add Classes</button> --> -->
+<!-- 	<button type="button" id="addClasses" class="btn btn-primary btn-sm">Add Classes</button> --> 
 <!-- 	</div>  -->
         	
 	<div>
