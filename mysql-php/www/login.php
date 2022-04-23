@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>HR database</title>
+<title>Gym Database</title>
 <?php require_once('header.php'); ?>
 </head>
 
