@@ -10,7 +10,7 @@
 
 <div class="container-fluid mt-3 mb-3">
     <ul>
-    	<li><a href="employees.php">Basic information about employees (read only)</a></li>    
+<li><a href="classes.php">Basic information about classes</a></li>    
     </ul>
 </div>
 
