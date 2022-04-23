@@ -37,13 +37,16 @@
 <input id="submit" type="submit" value="Search">
 <?php 
 
+global $conn;
 
-$class_name = mysql_real_escape_string($_POST['search']);
+$class_name = ($_POST['search']);
 
-$result = mysql_query("SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.limit_capacity as 'Limit', c.class_length as 'Class_Length',  u.first_name 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes ic USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id) WHERE Class_Name LIKE '" + $class_name + ";");
-$numberRows = $result->rowCount();
+$searchQuery = ("SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.limit_capacity as 'Limit', c.class_length as 'Class_Length',  u.first_name 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes ic USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id) WHERE Class_Name LIKE '" + $class_name + ";");
+$stmt = $conn->prepare($searchQuery);
+$stmt->execute();
+$numberRows = $stmt->rowCount();
 
- while ($sqlRow = mysql_fetch_assoc($result)) {
+while ($sqlRow = $stmt->fetch()) {
      $dataRow1 = $sqlRow['Class_Id'];
      $dataRow2 = $sqlRow['Class_Name'];
      $dataRow3 = $sqlRow['Limit'];
@@ -107,8 +110,7 @@ $numberRows = $result->rowCount();
 			//             $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
 			//         }
 			
-			$stmt = $conn->prepare($sqlQuery);
-			$stmt->execute();
+			
 			
 			$dataTable = array();
 			
