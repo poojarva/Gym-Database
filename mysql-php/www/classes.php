@@ -31,6 +31,44 @@
 	<div class="pb-3">
 	<button type="button" id="addClasses" class="btn btn-primary btn-sm">Add Classes</button> 
 	</div> 
+	
+	<form action="classes-action.php" method="GET">
+<input id="search" name="search" type="text" placeholder="Type here">
+<input id="submit" type="submit" value="Search">
+<?php 
+
+
+$class_name = mysql_real_escape_string($_POST['search']);
+
+$result = mysql_query("SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.limit_capacity as 'Limit', c.class_length as 'Class_Length',  u.first_name 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes ic USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id) WHERE Class_Name LIKE '" + $class_name + ";");
+$numberRows = $result->rowCount();
+
+ while ($sqlRow = mysql_fetch_assoc($result)) {
+     $dataRow1 = $sqlRow['Class_Id'];
+     $dataRow2 = $sqlRow['Class_Name'];
+     $dataRow3 = $sqlRow['Limit'];
+     $dataRow4 = $sqlRow['Class_Length'];
+     $dataRow5 = $sqlRow['Instructor_First_Name'];
+     $dataRow6 = $sqlRow['Instructor_Last_Name'];
+     $dataRow7 = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Update</button>
+                          <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Delete</button>';
+     
+     echo '<tr>
+                  <td>'.$numberRows.'</td>
+                  <td>'.$dataRow1.'</td>
+                  <td>'.$dataRow2.'</td>
+                  <td>'.$dataRow3.'</td>
+                  <td>'.$dataRow4.'</td>
+                  <td>'.$dataRow5.'</td>
+                  <td>'.$dataRow6.'</td>
+                  <td>'.$dataRow7.'</td>
+              </tr>';
+ }
+
+
+  ?>
+</form>
+        	
         	
 	<div>
 		<table id="table-classes" class="table table-bordered table-striped">
@@ -50,29 +88,29 @@
 			
 			$sqlQuery = "SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.limit_capacity as 'Limit', c.class_length as 'Class_Length',  u.first_name 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes ic USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id);";
 			
-			        if (! empty($_POST["search"]["value"])) {
-			            $sqlQuery .= 'WHERE (class_id LIKE "%' . $_POST["search"]["value"] . '%" OR class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
-			        }
+			//         if (! empty($_POST["search"]["value"])) {
+			//             $sqlQuery .= 'WHERE (class_id LIKE "%' . $_POST["search"]["value"] . '%" OR class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
+			//         }
 			
-			        if (! empty($_POST["order"])) {
-			            $sqlQuery .= 'ORDER BY ' . ($_POST['order']['0']['column'] + 1) . ' ' . $_POST['order']['0']['dir'] . ' ';
-			        } else {
-			            $sqlQuery .= 'ORDER BY class_name DESC ';
-			        }
+			//         if (! empty($_POST["order"])) {
+			//             $sqlQuery .= 'ORDER BY ' . ($_POST['order']['0']['column'] + 1) . ' ' . $_POST['order']['0']['dir'] . ' ';
+			//         } else {
+			//             $sqlQuery .= 'ORDER BY class_name DESC ';
+			//         }
 			
 			$stmt = $conn->prepare($sqlQuery);
 			$stmt->execute();
 			
 			$numberRows = $stmt->rowCount();
 			
-			        if ($_POST["length"] != - 1) {
-			            $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-			        }
+			//         if ($_POST["length"] != - 1) {
+			//             $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+			//         }
 			
 			$stmt = $conn->prepare($sqlQuery);
 			$stmt->execute();
 			
-// 			$dataTable = array();
+			$dataTable = array();
 			
 			while ($sqlRow = $stmt->fetch()) {
 // 			    $dataRow = array();
