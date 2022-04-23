@@ -75,28 +75,38 @@
 			$dataTable = array();
 			
 			while ($sqlRow = $stmt->fetch()) {
-			    $dataRow = array();
+// 			    $dataRow = array();
 			    
-			    $dataRow[] = $sqlRow['Class_Id'];
-			    $dataRow[] = $sqlRow['Class_Name'];
-			    $dataRow[] = $sqlRow['Limit'];
-			    $dataRow[] = $sqlRow['Class_Length'];
-			    $dataRow[] = $sqlRow['Instructor_First_Name'];
-			    $dataRow[] = $sqlRow['Instructor_Last_Name'];
+			    $dataRow1 = $sqlRow['Class_Id'];
+			    $dataRow2 = $sqlRow['Class_Name'];
+			    $dataRow3 = $sqlRow['Limit'];
+			    $dataRow4 = $sqlRow['Class_Length'];
+			    $dataRow5 = $sqlRow['Instructor_First_Name'];
+			    $dataRow6 = $sqlRow['Instructor_Last_Name'];
 			    
-			    $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Update</button>
+			    $dataRow7 = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Update</button>
                           <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Delete</button>';
 			    
-			    $dataTable[] = $dataRow;
+// 			    $dataTable[] = $dataRow;
 			}
 			
-			$output = array(
-			    "recordsTotal" => $numberRows,
-			    "recordsFiltered" => $numberRows,
-			    "data" => $dataTable
-			);
+// 			$output = array(
+// 			    "recordsTotal" => $numberRows,
+// 			    "recordsFiltered" => $numberRows,
+// 			    "data" => $dataTable
+// 			);
+
+			echo '<tr>
+                  <td>'.$dataRow1.'</td>
+                  <td>'.$dataRow2.'</td>
+                  <td>'.$dataRow3.'</td>
+                  <td>'.$dataRow4.'</td>
+                  <td>'.$dataRow5.'</td>
+                  <td>'.$dataRow6.'</td>
+                  <td>'.$dataRow7.'</td>
+              </tr>';
 			
-			echo ($output);
+			
 			?>
 		</table>
 	</div>
