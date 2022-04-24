@@ -71,6 +71,8 @@ $(document).ready(function(){
 				$('.modal-title').html("Edit Member");
 				$('#action').val('updateMember');
 				$('#save').val('Save');
+				tableMembers.ajax.reload();
+
 			}
 		})
 	});
