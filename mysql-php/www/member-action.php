@@ -7,17 +7,17 @@ class Member
     {
         global $conn;
         
-        $sqlQuery = "SELECT m.username_id as 'ID', m.first_name, m.last_name, l.location_id, l.location_name, m.email
-                     FROM members m JOIN users USING username_id JOIN location l using location_id";
+        $sqlQuery = "SELECT m.username_id as 'ID', u.first_name, u.last_name, l.location_id, l.location_name, u.email
+                     FROM members m JOIN users u USING (username_id) JOIN location l using (location_id)";
         
         if (! empty($_POST["search"]["value"])) {
-            $sqlQuery .= 'WHERE (m.first_name LIKE "%' . $_POST["search"]["value"] . '%" OR m.last_name LIKE "%' . $_POST["search"]["value"] . '%") ';
+            $sqlQuery .= 'WHERE (u.first_name LIKE "%' . $_POST["search"]["value"] . '%" OR u.last_name LIKE "%' . $_POST["search"]["value"] . '%") ';
         }
         
         if (! empty($_POST["order"])) {
             $sqlQuery .= 'ORDER BY ' . ($_POST['order']['0']['column'] + 1) . ' ' . $_POST['order']['0']['dir'] . ' ';
         } else {
-            $sqlQuery .= 'ORDER BY m.username_id DESC ';
+            $sqlQuery .= 'ORDER BY u.username_id DESC ';
         }
         
         $stmt = $conn->prepare($sqlQuery);
@@ -65,9 +65,8 @@ class Member
         
         if ($_POST["ID"]) {
             
-            $sqlQuery = "SELECT m.username_id as 'ID', m.first_name, m.last_name, l.location_id, l.location_name, m.email
-                     FROM members m JOIN users USING username_id JOIN location l using location_id
-                     WHERE username_id = :username_ID";
+            $sqlQuery = "SELECT m.username_id as 'ID', u.first_name, u.last_name, l.location_id, l.location_name, u.email
+                     FROM members m JOIN users u USING (username_id) JOIN location l using (location_id)";
             
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':username_ID', $_POST["ID"]);
@@ -89,7 +88,7 @@ class Member
                             last_name = :last_name,
                             location_id = :location_id,
                             email = :email,
-                            password = :password,
+                            password = :password
                             WHERE username_id = :username_id";
             
             $stmt = $conn->prepare($sqlQuery);
@@ -106,10 +105,10 @@ class Member
     {
         global $conn;
         
-        $sqlQuery = "INSERT INTO employees
+        $sqlQuery = "INSERT INTO users
                      (first_name, last_name, password, type, location_id, email)
                      VALUES
-                     (:first_name, :last_name, :password, :type, :email, :location_id, :email)";
+                     (:first_name, :last_name, :password, :type, :location_id, :email)";
         
         $stmt = $conn->prepare($sqlQuery);
         $stmt->bindValue(':first_name', $_POST["firstname"]);
