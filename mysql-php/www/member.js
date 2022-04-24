@@ -56,11 +56,10 @@ $(document).ready(function(){
 			method:"POST",
 			data:{
 				ID: $('#ID').val(),
-				first_name: $('#first_name').val(),
-				last_name: $('#last_name').val(),
+				first_name: $('#firstname').val(),
+				last_name: $('#lastname').val(),
 				email: $('#email').val(),
 				password: $('#password').val(),
-				type: $('#type').val(),
 				location_id: $('#location_id').val(),
 				action: $('#action').val(),
 			},
@@ -88,7 +87,7 @@ $(document).ready(function(){
 				$('#lastname').val(data.last_name);
 				$('#email').val(data.email);
 				$('#password').val(data.password);
-				$('#locatoin_id').val(data.location_id);
+				$('#location_id').val(data.location_id);
 				$('.modal-title').html("Edit Member");
 				$('#action').val('updateMember');
 				$('#save').val('Save');

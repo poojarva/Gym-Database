@@ -76,7 +76,7 @@
             			</select>
             			
             			
-            			<label>Email</label> <input type="text" class="form-control" id="password" placeholder="Enter password" required>
+            			<label>Password</label> <input type="text" class="form-control" id="password" placeholder="Enter password" required>
             			
             			
 
