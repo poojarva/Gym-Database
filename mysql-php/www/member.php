@@ -14,10 +14,9 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
-<script src="js/advanced-employee.js"></script>
+<script src="member.js"></script>
 
 <!-- CSS for datatables buttons -->
-<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css"/>
 </head>
 
 <?php require_once('connection.php'); ?>
