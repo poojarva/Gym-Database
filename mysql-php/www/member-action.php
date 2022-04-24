@@ -7,7 +7,7 @@ class Member
     {
         global $conn;
         
-        $sqlQuery = "SELECT m.username_id as 'ID', u.first_name, u.last_name, l.location_id, l.location_name, u.email
+        $sqlQuery = "SELECT m.username_id as 'ID', u.first_name as 'First Name', u.last_name as 'Last Name', l.location_id as 'Location ID', l.location_name as 'Location Name', u.email as 'Email' 
                      FROM members m JOIN users u USING (username_id) JOIN location l using (location_id)";
         
         if (! empty($_POST["search"]["value"])) {
@@ -65,8 +65,8 @@ class Member
         
         if ($_POST["ID"]) {
             
-            $sqlQuery = "SELECT m.username_id as 'ID', u.first_name, u.last_name, l.location_id, l.location_name, u.email
-                     FROM members m JOIN users u USING (username_id) JOIN location l using (location_id)";
+            $sqlQuery = "SELECT m.username_id as 'ID', u.first_name as 'First Name', u.last_name as 'Last Name', l.location_id as 'Location ID', l.location_name as 'Location Name', u.email as 'Email' 
+                     FROM members m JOIN users u USING (username_id) JOIN location l using (location_id) WHERE ID = :usernameID";
             
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':username_ID', $_POST["ID"]);
@@ -94,6 +94,7 @@ class Member
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':first_name', $_POST["firstname"]);
             $stmt->bindValue(':last_name', $_POST["lastname"]);
+            $stmt->bindValue(':email', $_POST["email"]);
             $stmt->bindValue(':location_id', $_POST["location_id"]);
             $stmt->bindValue(':password', password_hash($_POST["password"]), PASSWORD_DEFAULT);
             $stmt->bindValue(':username_id', $_POST["ID"]);
@@ -119,6 +120,8 @@ class Member
         $stmt->bindValue(':location_id', $_POST["location_id"]);
         $stmt->bindValue(':email', $_POST["email"]);
         $stmt->execute();
+        
+   // TODO!     //NEED TO ALSO ADD MEMBER TO MEMBERS TABLE!!
     }
     
     public function deleteMember()

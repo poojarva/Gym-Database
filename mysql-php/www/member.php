@@ -75,17 +75,8 @@
                             ?>
             			</select>
             			
-            			<label>Location Name</label> 
-            			<select class="form-control" id="location_id">
-            			    <?php
-            			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
-            			        $stmt = $conn->prepare($sqlQuery);
-            			        $stmt->execute();
-            			        while ($row = $stmt->fetch()) {
-            			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
-            			        }
-                            ?>
-            			</select>
+            			
+            			<label>Email</label> <input type="text" class="form-control" id="password" placeholder="Enter password" required>
             			
             			
 
