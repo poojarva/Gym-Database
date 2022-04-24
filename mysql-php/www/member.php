@@ -40,6 +40,7 @@
 					<th>Location ID</th>
 					<th>Location Name</th>
 					<th>Email</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 		</table>
