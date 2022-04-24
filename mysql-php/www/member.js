@@ -26,6 +26,8 @@ $(document).ready(function(){
 		$('.modal-title').html("Add Member");
 		$('#action').val('addMember');
 		$('#save').val('Add');
+		tableMember.ajax.reload();
+
 	});
 	
 	$("#member-modal").on('submit','#member-form', function(event){
@@ -47,7 +49,6 @@ $(document).ready(function(){
 				$('#member-modal').modal('hide');
 				$('#member-form')[0].reset();
 				$('#save').attr('disabled', false);
-				tableMember.ajax.reload();
 			}
 		})
 	});		
