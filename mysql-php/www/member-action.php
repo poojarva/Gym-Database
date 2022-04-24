@@ -96,7 +96,7 @@ class Member
             $stmt->bindValue(':last_name', $_POST["last_name"]);
             $stmt->bindValue(':email', $_POST["email"]);
             $stmt->bindValue(':location_id', $_POST["location_id"]);
-            $stmt->bindValue(':password', password_hash($_POST["password"]), PASSWORD_DEFAULT);
+            $stmt->bindValue(':password', password_hash($_POST["password"], PASSWORD_DEFAULT));
             $stmt->bindValue(':username_id', $_POST["ID"]);
             $stmt->execute();
         }
@@ -115,7 +115,7 @@ class Member
         $stmt->bindValue(':first_name', $_POST["first_name"]);
         $stmt->bindValue(':last_name', $_POST["last_name"]);
 //       TEST: will the password hashing work?
-        $stmt->bindValue(':password', $_POST["password"]);
+        $stmt->bindValue(':password', password_hash($_POST["password"], PASSWORD_DEFAULT));
         $stmt->bindValue(':location_id', $_POST["location_id"]);
         $stmt->bindValue(':email', $_POST["email"]);
         $stmt->execute();
