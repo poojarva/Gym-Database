@@ -123,12 +123,12 @@ class Member
         
    // TODO!     //NEED TO ALSO ADD MEMBER TO MEMBERS TABLE!!
    
-        $sqlQuery = "INSERT INTO members
+        $sqlQueryAddMember = "INSERT INTO members
                      (username_id) 
                      
                      SELECT username_id FROM users WHERE email = :email";
         
-        $stmt = $conn->prepare($sqlQuery);
+        $stmt = $conn->prepare($sqlQueryAddMember);
         $stmt->bindValue(':email', $_POST["email"]);
         $stmt->execute();
         
