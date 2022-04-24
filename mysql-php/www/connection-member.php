@@ -25,7 +25,7 @@ if (!isset($_SESSION['username_id']))
     // If the page is receiving the email and password from the login form then verify the login data
     if (isset($_POST['email']) && isset($_POST['password']))
     {
-        $stmt = $conn->prepare("SELECT username_id, password FROM users WHERE email=:email AND type LIKE 'Member'");
+        $stmt = $conn->sprepare("SELECT username_id, password FROM users WHERE email=:email AND type LIKE 'Member'");
         $stmt->bindValue(':email', $_POST['email']);
         $stmt->execute();
         
@@ -42,14 +42,14 @@ if (!isset($_SESSION['username_id']))
         } else {
             // Password mismatch
             echo "User not a Member in the System - Please try again.";
-            require('login.php');
+            require('login-member.php');
             exit();
         }
     }
     else
     {
         // Show login page
-        require('login.php');
+        require('login-member.php');
         exit();
     }
 }

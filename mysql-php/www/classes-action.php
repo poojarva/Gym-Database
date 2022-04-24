@@ -28,8 +28,6 @@ class Classes
 //             $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
 //         }
         
-        $stmt = $conn->prepare($sqlQuery);
-        $stmt->execute();
         
         $dataTable = array();
         
@@ -57,101 +55,7 @@ class Classes
         
         echo json_encode($output);
     }
- /*    
-    public function getEmployee()
-    {
-        global $conn;
-        
-        if ($_POST["ID"]) {
-            
-            $sqlQuery = "SELECT employee_ID as `ID`,
-                            first_name,
-                            last_name,
-                            salary,
-                            manager_ID,
-                            department_ID,
-                            email,
-                            job_ID
-                     FROM employees
-                     WHERE employee_ID = :employee_ID";
-            
-            $stmt = $conn->prepare($sqlQuery);
-            $stmt->bindValue(':employee_ID', $_POST["ID"]);
-            $stmt->execute();
-            
-            echo json_encode($stmt->fetch());
-        }
-     } */
-    
-//     public function updateEmployee()
-//     {
-//         global $conn;
-        
-//         if ($_POST['ID']) {
-            
-//             $sqlQuery = "UPDATE employees
-//                             SET
-//                             first_name = :first_name,
-//                             last_name = :last_name,
-//                             manager_ID = :manager_ID,
-//                             department_ID = :department_ID,
-//                             email = :email,
-//                             job_ID = :job_ID,
-//                             salary = :salary
-//                             WHERE employee_ID = :employee_ID";
-            
-//             $stmt = $conn->prepare($sqlQuery);
-//             $stmt->bindValue(':first_name', $_POST["firstname"]);
-//             $stmt->bindValue(':last_name', $_POST["lastname"]);
-//             $stmt->bindValue(':manager_ID', $_POST["manager"]);
-//             $stmt->bindValue(':department_ID', $_POST["department"]);
-//             $stmt->bindValue(':email', $_POST["email"]);
-//             $stmt->bindValue(':job_ID', $_POST["job"]);
-//             $stmt->bindValue(':salary', $_POST["salary"]);
-//             $stmt->bindValue(':employee_ID', $_POST["ID"]);
-//             $stmt->execute();
-//         }
-//     }
-    
-//     public function addEmployee()
-//     {
-//         global $conn;
-        
-//         $sqlQuery = "INSERT INTO employees
-//                      (first_name, last_name, manager_ID, department_ID, email, job_ID, salary, hire_date)
-//                      VALUES
-//                      (:first_name, :last_name, :manager_ID, :department_ID, :email, :job_ID, :salary, CURDATE())";
-        
-//         $stmt = $conn->prepare($sqlQuery);
-//         $stmt->bindValue(':first_name', $_POST["firstname"]);
-//         $stmt->bindValue(':last_name', $_POST["lastname"]);
-//         $stmt->bindValue(':manager_ID', $_POST["manager"]);
-//         $stmt->bindValue(':department_ID', $_POST["department"]);
-//         $stmt->bindValue(':email', $_POST["email"]);
-//         $stmt->bindValue(':job_ID', $_POST["job"]);
-//         $stmt->bindValue(':salary', $_POST["salary"]);
-//         $stmt->execute();
-//     }
-    
-//     public function deleteEmployee()
-//     {
-//         global $conn;
-        
-//         if ($_POST["ID"]) {
-            
-//             $sqlQuery = "DELETE FROM job_history WHERE employee_ID = :employee_ID";
-            
-//             $stmt = $conn->prepare($sqlQuery);
-//             $stmt->bindValue(':employee_ID', $_POST["ID"]);
-//             $stmt->execute();
-            
-//             $sqlQuery = "DELETE FROM employees WHERE employee_ID = :employee_ID";
-            
-//             $stmt = $conn->prepare($sqlQuery);
-//             $stmt->bindValue(':employee_ID', $_POST["ID"]);
-//             $stmt->execute();
-//         }
-//     }
+ 
 }
 
 $class = new Classes();
@@ -159,17 +63,6 @@ $class = new Classes();
 if(!empty($_POST['action']) && $_POST['action'] == 'listClasses') {
     $class->listClasses();
 }
-// if(!empty($_POST['action']) && $_POST['action'] == 'addEmployee') {
-//     $employee->addEmployee();
-// }
-// if(!empty($_POST['action']) && $_POST['action'] == 'getEmployee') {
-//     $employee->getEmployee();
-// }
-// if(!empty($_POST['action']) && $_POST['action'] == 'updateEmployee') {
-//     $employee->updateEmployee();
-// }
-// if(!empty($_POST['action']) && $_POST['action'] == 'deleteEmployee') {
-//     $employee->deleteEmployee();
-// }
+
 
 ?>
