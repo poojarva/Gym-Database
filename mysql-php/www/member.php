@@ -56,9 +56,9 @@
 				<div class="modal-body">
 					<div class="form-group">
 
-						<label>First name</label><input type="text" class="form-control" id="firstname" placeholder="Enter first name" required>
+						<label>First name</label><input type="text" class="form-control" id="first_name" placeholder="Enter first name" required>
 						
-						<label>Last name</label> <input type="text" class="form-control" id="lastname" placeholder="Enter last name" required>
+						<label>Last name</label> <input type="text" class="form-control" id="last_name" placeholder="Enter last name" required>
 						
 						<label>Email</label> <input type="text" class="form-control" id="email" placeholder="Enter email" required>
 												

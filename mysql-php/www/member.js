@@ -36,8 +36,8 @@ $(document).ready(function(){
 			method:"POST",
 			data:{
 				ID: $('#ID').val(),
-				first_name: $('#firstname').val(),
-				last_name: $('#lastname').val(),
+				first_name: $('#first_name').val(),
+				last_name: $('#last_name').val(),
 				email: $('#email').val(),
 				password: $('#password').val(),
 				location_id: $('#location_id').val(),
@@ -63,8 +63,8 @@ $(document).ready(function(){
 			success:function(data){
 				$('#member-modal').modal('show');
 				$('#ID').val(ID);
-				$('#firstname').val(data.first_name);
-				$('#lastname').val(data.last_name);
+				$('#first_name').val(data.first_name);
+				$('#last_name').val(data.last_name);
 				$('#email').val(data.email);
 				$('#password').val(data.password);
 				$('#location_id').val(data.location_id);

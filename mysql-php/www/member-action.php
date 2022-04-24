@@ -92,8 +92,8 @@ class Member
                             WHERE username_id = :username_id";
             
             $stmt = $conn->prepare($sqlQuery);
-            $stmt->bindValue(':first_name', $_POST["firstname"]);
-            $stmt->bindValue(':last_name', $_POST["lastname"]);
+            $stmt->bindValue(':first_name', $_POST["first_name"]);
+            $stmt->bindValue(':last_name', $_POST["last_name"]);
             $stmt->bindValue(':email', $_POST["email"]);
             $stmt->bindValue(':location_id', $_POST["location_id"]);
             $stmt->bindValue(':password', password_hash($_POST["password"]), PASSWORD_DEFAULT);
@@ -112,10 +112,10 @@ class Member
                      (:first_name, :last_name, 'testtt', 'Member', :location_id, :email)";
         
         $stmt = $conn->prepare($sqlQuery);
-        $stmt->bindValue(':first_name', $_POST["firstname"]);
-        $stmt->bindValue(':last_name', $_POST["lastname"]);
+        $stmt->bindValue(':first_name', $_POST["first_name"]);
+        $stmt->bindValue(':last_name', $_POST["last_name"]);
 //       TEST: will the password hashing work?
-//         $stmt->bindValue(':password', password_hash($_POST["password"]), PASSWORD_DEFAULT);
+        $stmt->bindValue(':password', password_hash($_POST["password"]), PASSWORD_DEFAULT);
         $stmt->bindValue(':location_id', $_POST["location_id"]);
         $stmt->bindValue(':email', $_POST["email"]);
         $stmt->execute();
