@@ -17,27 +17,7 @@ $(document).ready(function(){
 					action:'listMembers'
 				},
 			dataType:"json"
-		},
-		"columnDefs":[ {"targets":[0], "visible":false} ],
-		"buttons": [
-				{
-					extend: 'excelHtml5',
-					title: 'Members',
-					filename: 'Members',
-					exportOptions: {columns: [1,2,3,4,5,6]}
-				},
-				{
-					extend: 'pdfHtml5',
-					title: 'Members',
-					filename: 'Members',
-					exportOptions: {columns: [1,2,3,4,5,6]}
-				},
-				{
-					extend: 'print',
-					title: 'Members',
-					filename: 'Members',
-					exportOptions: {columns: [1,2,3,4,5,6]}
-				}]
+		}
 	});	
 	
 	$("#addMember").click(function(){
