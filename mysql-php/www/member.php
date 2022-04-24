@@ -32,29 +32,27 @@
 	</div> 
         	
 	<div>
-		<table id="table-employee" class="table table-bordered table-striped">
+		<table id="table-members" class="table table-bordered table-striped">
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Name</th>
-					<th>Salary</th>
-					<th>Manager</th>
-					<th>Department</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Location ID</th>
+					<th>Location Name</th>
 					<th>Email</th>
-					<th>Job</th>
-					<th>Actions</th>
 				</tr>
 			</thead>
 		</table>
 	</div>
 </div>
 
-<div id="employee-modal" class="modal fade">
+<div id="member-modal" class="modal fade">
 	<div class="modal-dialog">
-		<form method="post" id="employee-form">
+		<form method="post" id="member-form">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h4 class="modal-title">Edit Emploee</h4>
+					<h4 class="modal-title">Edit Member</h4>
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
@@ -64,44 +62,32 @@
 						<label>Last name</label> <input type="text" class="form-control" id="lastname" placeholder="Enter last name" required>
 						
 						<label>Email</label> <input type="text" class="form-control" id="email" placeholder="Enter email" required>
-						
-						<label>Salary</label> <input type="number" class="form-control" min="0.01" step="0.01" size="8" value="0" id="salary">
-						
-						<label>Department</label>
-						<select class="form-control" id="department">
+												
+						<label>Location ID</label>
+						<select class="form-control" id="location_id">
             			    <?php
-            			        $sqlQuery = "SELECT department_ID, department_name FROM departments ORDER BY department_name ASC";
+            			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
             			        $stmt = $conn->prepare($sqlQuery);
             			        $stmt->execute();
             			        while ($row = $stmt->fetch()) {
-            			            echo "<option value=\"" . $row["department_ID"] . "\">" . $row["department_name"] . "</option>";
+            			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
             			        }
                             ?>
             			</select>
             			
-            			<label>Manager</label>
-						<select class="form-control" id="manager">
+            			<label>Location Name</label> 
+            			<select class="form-control" id="location_id">
             			    <?php
-            			        $sqlQuery = "SELECT employee_ID, concat(first_name, \" \", last_name) as `name` FROM employees ORDER BY `name` ASC";
+            			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
             			        $stmt = $conn->prepare($sqlQuery);
             			        $stmt->execute();
             			        while ($row = $stmt->fetch()) {
-            			            echo "<option value=\"" . $row["employee_ID"] . "\">" . $row["name"] . "</option>";
+            			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
             			        }
                             ?>
             			</select>
             			
-            			<label>Job</label>
-						<select class="form-control" id="job">
-            			    <?php
-            			        $sqlQuery = "SELECT job_ID, job_title FROM jobs ORDER BY `job_title` ASC";
-            			        $stmt = $conn->prepare($sqlQuery);
-            			        $stmt->execute();
-            			        while ($row = $stmt->fetch()) {
-            			            echo "<option value=\"" . $row["job_ID"] . "\">" . $row["job_title"] . "</option>";
-            			        }
-                            ?>
-            			</select>
+            			
 
 					</div>
 				</div>
