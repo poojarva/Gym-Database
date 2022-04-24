@@ -109,14 +109,13 @@ class Member
         $sqlQuery = "INSERT INTO users
                      (first_name, last_name, password, type, location_id, email)
                      VALUES
-                     (:first_name, :last_name, :password, :type, :location_id, :email)";
+                     (:first_name, :last_name, 'testtt', 'Member', :location_id, :email)";
         
         $stmt = $conn->prepare($sqlQuery);
         $stmt->bindValue(':first_name', $_POST["firstname"]);
         $stmt->bindValue(':last_name', $_POST["lastname"]);
 //       TEST: will the password hashing work?
-        $stmt->bindValue(':password', password_hash($_POST["password"]), PASSWORD_DEFAULT);
-        $stmt->bindValue(':type', "Member");
+//         $stmt->bindValue(':password', password_hash($_POST["password"]), PASSWORD_DEFAULT);
         $stmt->bindValue(':location_id', $_POST["location_id"]);
         $stmt->bindValue(':email', $_POST["email"]);
         $stmt->execute();
