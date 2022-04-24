@@ -122,6 +122,16 @@ class Member
         $stmt->execute();
         
    // TODO!     //NEED TO ALSO ADD MEMBER TO MEMBERS TABLE!!
+   
+        $sqlQuery = "INSERT INTO members
+                     (username_id) 
+                     
+                     SELECT username_id FROM users WHERE email = :email";
+        
+        $stmt = $conn->prepare($sqlQuery);
+        $stmt->bindValue(':email', $_POST["email"]);
+        $stmt->execute();
+        
     }
     
     public function deleteMember()
