@@ -47,60 +47,60 @@
 	</div>
 </div>
 
-<div id="member-modal" class="modal fade">
-	<div class="modal-dialog">
-		<form method="post" id="member-form">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title">Edit Member</h4>
-				</div>
-				<div class="modal-body">
-					<div class="form-group">
+<!-- <div id="member-modal" class="modal fade"> -->
+<!-- 	<div class="modal-dialog"> -->
+<!-- 		<form method="post" id="member-form"> -->
+<!-- 			<div class="modal-content"> -->
+<!-- 				<div class="modal-header"> -->
+<!-- 					<h4 class="modal-title">Edit Member</h4> -->
+<!-- 				</div> -->
+<!-- 				<div class="modal-body"> -->
+<!-- 					<div class="form-group"> -->
 
-						<label>First name</label><input type="text" class="form-control" id="firstname" placeholder="Enter first name" required>
+<!-- 						<label>First name</label><input type="text" class="form-control" id="firstname" placeholder="Enter first name" required> -->
 						
-						<label>Last name</label> <input type="text" class="form-control" id="lastname" placeholder="Enter last name" required>
+<!-- 						<label>Last name</label> <input type="text" class="form-control" id="lastname" placeholder="Enter last name" required> -->
 						
-						<label>Email</label> <input type="text" class="form-control" id="email" placeholder="Enter email" required>
+<!-- 						<label>Email</label> <input type="text" class="form-control" id="email" placeholder="Enter email" required> -->
 												
-						<label>Location ID</label>
-						<select class="form-control" id="location_id">
+<!-- 						<label>Location ID</label> -->
+<!-- 						<select class="form-control" id="location_id"> -->
             			    <?php
-            			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
-            			        $stmt = $conn->prepare($sqlQuery);
-            			        $stmt->execute();
-            			        while ($row = $stmt->fetch()) {
-            			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
-            			        }
-                            ?>
-            			</select>
+//             			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
+//             			        $stmt = $conn->prepare($sqlQuery);
+//             			        $stmt->execute();
+//             			        while ($row = $stmt->fetch()) {
+//             			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
+//             			        }
+//                             ?>
+<!--             			</select> -->
             			
-            			<label>Location Name</label> 
-            			<select class="form-control" id="location_id">
+<!--             			<label>Location Name</label>  -->
+<!--             			<select class="form-control" id="location_id"> -->
             			    <?php
-            			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
-            			        $stmt = $conn->prepare($sqlQuery);
-            			        $stmt->execute();
-            			        while ($row = $stmt->fetch()) {
-            			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
-            			        }
-                            ?>
-            			</select>
+//             			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
+//             			        $stmt = $conn->prepare($sqlQuery);
+//             			        $stmt->execute();
+//             			        while ($row = $stmt->fetch()) {
+//             			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
+//             			        }
+//                             ?>
+<!--             			</select> -->
             			
             			
 
-					</div>
-				</div>
-				<div class="modal-footer">
-					<input type="hidden" name="ID" id="ID"/>
-					<input type="hidden" name="action" id="action" value=""/>
-					<input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
-					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</form>
-	</div>
-</div>
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 				<div class="modal-footer"> -->
+<!-- 					<input type="hidden" name="ID" id="ID"/> -->
+<!-- 					<input type="hidden" name="action" id="action" value=""/> -->
+<!-- 					<input type="submit" name="save" id="save" class="btn btn-info" value="Save" /> -->
+<!-- 					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 		</form> -->
+<!-- 	</div> -->
+<!-- </div> -->
 
 </body>
 </html>

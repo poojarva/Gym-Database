@@ -39,7 +39,7 @@ $(document).ready(function(){
 					exportOptions: {columns: [1,2,3,4,5,6]}
 				}]
 	});	
-	
+	/*
 	$("#addMember").click(function(){
 		$('#member-form')[0].reset();
 		$('#member-modal').modal('show');
@@ -105,11 +105,13 @@ $(document).ready(function(){
 				method:"POST",
 				data:{ID:ID, action:action},
 				success:function() {					
-					tableMember.ajax.reload();
+					tableMembers.ajax.reload();
 				}
 			})
 		} else {
 			return false;
 		}
 	});
+	
+	*/
 });
