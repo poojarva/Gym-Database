@@ -102,6 +102,7 @@ class Member
         }
     }
     
+    // TODO : add a check to see if the member is already in the system, throw an error if it is
     public function addMember()
     {
         global $conn;

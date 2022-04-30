@@ -26,7 +26,7 @@ $(document).ready(function(){
 		$('.modal-title').html("Add Member");
 		$('#action').val('addMember');
 		$('#save').val('Add');
-		tableMember.ajax.reload();
+	//	tableMember.ajax.reload();
 
 	});
 	
