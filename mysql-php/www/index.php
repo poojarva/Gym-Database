@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
-<?php require_once('connection.php'); ?>
+
 <body>
 
     <!-- Preloader Start -->
@@ -69,6 +69,7 @@
                 <h2>easy with our <em>gym</em></h2>
                 <div class="main-button scroll-to-section">
                     <a href="#features">Become a member</a>
+                    <?php require_once('connection.php'); ?>
                 </div>
             </div>
         </div>
