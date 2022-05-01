@@ -81,9 +81,9 @@
     
 <div class="container-fluid mt-3 mb-3">
     <ul>
-<li><a href="classes.php">Basic information about classes</a></li>  
+<!--   <li><a href="classes.php">Basic information about classes</a></li>  
 <li><a href="member.php">Information about members</a></li>    
-  
+  -->
     </ul>
 </div>
 
