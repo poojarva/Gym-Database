@@ -70,8 +70,9 @@
                 <div class="main-button scroll-to-section">
    <!--  TODO: need to change it so if the button become member is clicked then it will prompt them to sign in or sign up -->
                     <a href="#features">Become a member</a>
-                    <a>Login In <?php require_once('connection.php'); ?>
+                    <a>Login In 
                     </a>
+                    <?php require_once('connection.php'); ?>
                 </div>
             </div>
         </div>
