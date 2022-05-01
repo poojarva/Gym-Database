@@ -68,8 +68,10 @@
                 <h6>work harder, get stronger</h6>
                 <h2>easy with our <em>gym</em></h2>
                 <div class="main-button scroll-to-section">
+   <!--  TODO: need to change it so if the button become member is clicked then it will prompt them to sign in or sign up -->
                     <a href="#features">Become a member</a>
-                    <?php require_once('connection.php'); ?>
+                    <a>Login In <?php require_once('connection.php'); ?>
+                    </a>
                 </div>
             </div>
         </div>
