@@ -12,7 +12,8 @@
     <ul>
   <li><a href="classes.php">Basic information about classes</a></li>  
    <li><a href="rooms.php">Basic information about rooms</a></li> 
-<li><a href="member.php">Information about members</a></li>    
+<li><a href="member.php">Information about members</a></li>  
+<li><a href="logout.php">Log Out</a></li>  
   <!--  include information about employees and adding/dropping them -->
     </ul>
 </div>
