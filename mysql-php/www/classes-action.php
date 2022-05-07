@@ -41,8 +41,8 @@ class Classes
             $dataRow[] = $sqlRow['Instructor_First_Name'];
             $dataRow[] = $sqlRow['Instructor_Last_Name'];
             
-            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Update</button>
-                          <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Delete</button>';
+            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Book Class</button>
+                          <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Unbook Class</button>';
             
             $dataTable[] = $dataRow;
         }

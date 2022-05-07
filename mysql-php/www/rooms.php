@@ -20,6 +20,7 @@
 					<th>Room Type</th>
 					<th>Room Limit</th>
 					<th>Room Location</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 		</table>

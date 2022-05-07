@@ -26,7 +26,7 @@ $(document).ready(function(){
 		$('.modal-title').html("Add Member");
 		$('#action').val('addMember');
 		$('#save').val('Add');
-	//	tableMember.ajax.reload();
+		tableMember.ajax.reload();
 
 	});
 	
@@ -62,6 +62,7 @@ $(document).ready(function(){
 			data:{ID:ID, action:action},
 			dataType:"json",
 			success:function(data){
+				$('#member-form')[0].reset();
 				$('#member-modal').modal('show');
 				$('#ID').val(ID);
 				$('#first_name').val(data.first_name);

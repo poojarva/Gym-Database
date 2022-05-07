@@ -40,8 +40,8 @@ class Rooms
             $dataRow[] = $sqlRow['Room Location'];
 
             
-            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Update</button>
-                          <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Delete</button>';
+            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Book Room</button>
+                          <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Unbook Room</button>';
             
             $dataTable[] = $dataRow;
         }
@@ -57,10 +57,10 @@ class Rooms
     
 }
 
-$class = new Classes();
+$room = new Rooms();
 
 if(!empty($_POST['action']) && $_POST['action'] == 'listRooms') {
-    $class->listRooms();
+    $room->listRooms();
 }
 
 
