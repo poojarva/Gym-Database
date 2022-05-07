@@ -3,7 +3,7 @@
 <title>Classes</title>
 <?php require_once('header.php'); ?>
 <!-- My JS libraries -->
-<script src="classes.js"></script>
+<script src="classes-employee.js"></script>
 </head>
 
 <?php require_once('connection-employee.php'); ?>
