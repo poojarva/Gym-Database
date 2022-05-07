@@ -53,6 +53,7 @@ $(document).ready(function(){
 			}
 		})
 	});		
+
 	
 	$("#table-members").on('click', '.update', function(){
 		var ID = $(this).attr("emp_id");

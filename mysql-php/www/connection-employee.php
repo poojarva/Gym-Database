@@ -10,7 +10,7 @@ $database = "project_patelp16";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
@@ -25,7 +25,7 @@ if (!isset($_SESSION['username_id']))
     // If the page is receiving the email and password from the login form then verify the login data
     if (isset($_POST['email']) && isset($_POST['password']))
     {
-        $stmt = $conn->prepare("SELECT username_id, password FROM users WHERE email=:email");
+        $stmt = $conn->sprepare("SELECT username_id, password FROM users WHERE email=:email AND type LIKE 'Employee'");
         $stmt->bindValue(':email', $_POST['email']);
         $stmt->execute();
         
@@ -36,22 +36,20 @@ if (!isset($_SESSION['username_id']))
         {
             // Create session variable
             $_SESSION['username_id'] = $queryResult['username_id'];
-           
+            
             // Redirect to URL
-            // redirect to index for members
             header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
         } else {
             // Password mismatch
-            echo "User not in the System - Please try again.";
-            require('login.php');
+            echo "User not a Member in the System - Please try again.";
+            require('login-member.php');
             exit();
         }
     }
-    
     else
     {
         // Show login page
-        require('login.php');
+        require('login-member.php');
         exit();
     }
 }

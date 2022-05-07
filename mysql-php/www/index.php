@@ -50,7 +50,7 @@
                             <li class="scroll-to-section"><a href="#trainers">Trainers</a></li>
                             <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
                             <li class="scroll-to-section"><a href="#price">Price</a></li>
-                            <li class="scroll-to-section main-button"><a href="#contact-us">Contact</a></li>
+                            <li class="scroll-to-section main-button"><a href="#index-employee.php">Employee Login</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -78,13 +78,7 @@
         </div>
     </div>
     
-<div class="container-fluid mt-3 mb-3">
-    <ul>
-<!--   <li><a href="classes.php">Basic information about classes</a></li>  
-<li><a href="member.php">Information about members</a></li>    
-  -->
-    </ul>
-</div>
+
 
     <section class="section" id="features">
         <div class="container">
