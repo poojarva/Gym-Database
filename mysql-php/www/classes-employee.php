@@ -6,7 +6,7 @@
 <script src="classes.js"></script>
 </head>
 
-<?php require_once('connection-member.php'); ?>
+<?php require_once('connection-employee.php'); ?>
 
 <body>
 

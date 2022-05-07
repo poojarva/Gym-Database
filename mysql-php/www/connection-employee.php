@@ -41,7 +41,7 @@ if (!isset($_SESSION['username_id']))
             header("Location: http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
         } else {
             // Password mismatch
-            echo "User not a Member in the System - Please try again.";
+            echo "User not an Employee in the System - Please try again.";
             require('login-employee.php');
             exit();
         }
