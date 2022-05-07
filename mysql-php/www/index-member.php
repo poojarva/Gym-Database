@@ -2,6 +2,20 @@
 <head>
 <title>Gym Database Members</title>
 <?php require_once('header.php'); ?>
+<style>
+#button {
+     line-height: 12px;
+     width: 18px;
+     font-size: 8pt;
+     font-family: tahoma;
+     margin-top: 1px;
+     margin-right: 2px;
+     position:absolute;
+     top:0;
+     right:0;
+ }
+
+</style>
 </head>
 
 <?php require_once('connection-member.php'); ?>
