@@ -18,7 +18,10 @@ try {
 
 // Start or resume session variables
 session_start();
-
+if(session_destroy()) {
+    header("Location:connection-employee.php");
+}
+unset($_SESSION['userID']);
 // If the user_ID session is not set, then the user has not logged in yet
 if (!isset($_SESSION['username_id']))
 {
