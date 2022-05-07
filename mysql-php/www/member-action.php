@@ -65,8 +65,11 @@ class Member
         
         if ($_POST["ID"]) {
             
-            $sqlQuery = "SELECT m.username_id as 'ID', u.first_name as 'first_name', u.last_name as 'last_name', l.location_id as 'location_id', l.location_name as 'location_name', u.email as 'email', u.password as 'password' 
-                     FROM members m JOIN users u USING (username_id) JOIN location l using (location_id) WHERE m.username = :username_ID";
+            $sqlQuery = "SELECT u.first_name as 'first_name', u.last_name as
+ 'last_name',  u.email as 'email', l.location_id as 'location_id',
+ u.password as 'password' 
+                     FROM members m JOIN users u USING (username_id) JOIN location l using (location_id) WHERE m.username_id = :username_ID";
+                   
             
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':username_ID', $_POST["ID"]);
