@@ -50,7 +50,7 @@
                             <li class="scroll-to-section"><a href="#trainers">Trainers</a></li>
                             <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
                             <li class="scroll-to-section"><a href="#price">Price</a></li>
-                            <li class="main-button"><a href="#index-employee.php">Employee Login</a></li>
+                            <li class="main-button"><a href="index-employee.php">Employee Login</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
