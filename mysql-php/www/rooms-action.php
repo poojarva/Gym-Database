@@ -41,7 +41,7 @@ class Rooms
 
             
             $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Book Room</button>
-                          <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Unbook Room</button>';
+                          <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete">Unbook Room</button>';
             
             $dataTable[] = $dataRow;
         }

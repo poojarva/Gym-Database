@@ -16,7 +16,7 @@
 		<table id="table-classes" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th> Class ID</th> 
+					<th>Class ID</th> 
 					<th>Class Name</th>
 					<th>Class Limit</th>
 					<th>Class Length</th>
