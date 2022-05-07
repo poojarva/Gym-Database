@@ -22,8 +22,7 @@
 					<th>Class Length</th>
 					<th>Instructor First Name</th>
 					<th>Instructor Last Name</th>
-					<th> <button>Book Class</button> </th>
-					<th> <button>Cancel Class </button> </th>
+					
 				</tr>
 			</thead>
 		</table>
