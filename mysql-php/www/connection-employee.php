@@ -42,14 +42,14 @@ if (!isset($_SESSION['username_id']))
         } else {
             // Password mismatch
             echo "User not a Member in the System - Please try again.";
-            require('login-member.php');
+            require('login-employee.php');
             exit();
         }
     }
     else
     {
         // Show login page
-        require('login-member.php');
+        require('login-employee.php');
         exit();
     }
 }

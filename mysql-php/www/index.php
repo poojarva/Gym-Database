@@ -50,7 +50,7 @@
                             <li class="scroll-to-section"><a href="#trainers">Trainers</a></li>
                             <li class="scroll-to-section"><a href="#testimonials">Testimonials</a></li>
                             <li class="scroll-to-section"><a href="#price">Price</a></li>
-                            <li class="scroll-to-section main-button"><a href="#index-employee.php">Employee Login</a></li>
+                            <li class="main-button"><a href="#index-employee.php">Employee Login</a></li>
                         </ul>
                         <a class='menu-trigger'>
                             <span>Menu</span>
@@ -67,7 +67,7 @@
             <div class="caption">
                 <h6>work harder, get stronger</h6>
                 <h2>easy with our <em>gym</em></h2>
-                <div class="main-button scroll-to-section">
+                <div class="main-button">
    <!--  TODO: need to change it so if the button become member is clicked then it will prompt them to sign in or sign up -->
                     <a href="#features">Become a member</a>
                     <a href="index-member.php">Login In 

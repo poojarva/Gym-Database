@@ -4,7 +4,7 @@
 <?php require_once('header.php'); ?>
 </head>
 
-<?php require_once('connection-member.php'); ?>
+<?php require_once('connection-employee.php'); ?>
 
 <body>
 
