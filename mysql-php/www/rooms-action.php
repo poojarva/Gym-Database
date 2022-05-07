@@ -1,13 +1,13 @@
 <?php
 require_once ('connection.php');
 
-class Classes
+class Rooms
 {
-    public function listClasses()
+    public function listRooms()
     {
         global $conn;
         
-        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.room_capacity as 'Room_Limit', c.class_length as 'Class_Length', l. FROM classes c JOIN location l USING (location_id);";
+        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.room_capacity as 'Room_Limit', l.location_name  as 'Room Location' FROM rooms r JOIN location l USING (location_id);";
         
         //         if (! empty($_POST["search"]["value"])) {
         //             $sqlQuery .= 'WHERE (class_id LIKE "%' . $_POST["search"]["value"] . '%" OR class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
@@ -34,12 +34,11 @@ class Classes
         while ($sqlRow = $stmt->fetch()) {
             $dataRow = array();
             
-            $dataRow[] = $sqlRow['Class_Id'];
-            $dataRow[] = $sqlRow['Class_Name'];
-            $dataRow[] = $sqlRow['Limit'];
-            $dataRow[] = $sqlRow['Class_Length'];
-            $dataRow[] = $sqlRow['Instructor_First_Name'];
-            $dataRow[] = $sqlRow['Instructor_Last_Name'];
+            $dataRow[] = $sqlRow['Room_Id'];
+            $dataRow[] = $sqlRow['Room_Type'];
+            $dataRow[] = $sqlRow['Room_Limit'];
+            $dataRow[] = $sqlRow['Room Location'];
+
             
             $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-warning btn-sm update">Update</button>
                           <button type="button" name="delete" emp_id="' . $sqlRow["Class_Id"] . '" class="btn btn-danger btn-sm delete" >Delete</button>';
@@ -60,7 +59,7 @@ class Classes
 
 $class = new Classes();
 
-if(!empty($_POST['action']) && $_POST['action'] == 'listClasses') {
+if(!empty($_POST['action']) && $_POST['action'] == 'listRooms') {
     $class->listClasses();
 }
 

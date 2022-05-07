@@ -16,12 +16,10 @@
 		<table id="table-rooms" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Class ID</th> 
-					<th>Class Name</th>
-					<th>Class Limit</th>
-					<th>Class Length</th>
-					<th>Instructor First Name</th>
-					<th>Instructor Last Name</th>
+					<th>Room ID</th> 
+					<th>Room Type</th>
+					<th>Room Limit</th>
+					<th>Room Location</th>
 				</tr>
 			</thead>
 		</table>

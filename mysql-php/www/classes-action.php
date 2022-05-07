@@ -7,7 +7,7 @@ class Classes
     {
         global $conn;
         
-        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.room_capacity as 'Room_Limit', c.class_length as 'Class_Length', l. FROM classes c JOIN location l USING (location_id);";
+        $sqlQuery = "SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.class_length as 'Limit', c.class_length as 'Class_Length', u.first_name as 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes l USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id);";
         
 //         if (! empty($_POST["search"]["value"])) {
 //             $sqlQuery .= 'WHERE (class_id LIKE "%' . $_POST["search"]["value"] . '%" OR class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
