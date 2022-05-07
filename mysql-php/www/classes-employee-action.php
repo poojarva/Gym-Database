@@ -24,9 +24,9 @@ class Classes
         
         $numberRows = $stmt->rowCount();
         
-        if ($_POST["length"] != - 1) {
-            $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-        }
+//         if ($_POST["length"] != - 1) {
+//             $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+//         }
         
         
         $dataTable = array();
