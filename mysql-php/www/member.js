@@ -41,14 +41,15 @@ $(document).ready(function(){
 				first_name: $('#first_name').val(),
 				last_name: $('#last_name').val(),
 				email: $('#email').val(),
-				password: $('#password').val(),
 				location_id: $('#location_id').val(),
+				password: $('#password').val(),
 				action: $('#action').val(),
 			},
 			success:function(){
 				$('#member-modal').modal('hide');
 				$('#member-form')[0].reset();
 				$('#save').attr('disabled', false);
+				tableMember.ajax.reload();
 			}
 		})
 	});		
@@ -62,19 +63,16 @@ $(document).ready(function(){
 			data:{ID:ID, action:action},
 			dataType:"json",
 			success:function(data){
-				$('#member-form')[0].reset();
 				$('#member-modal').modal('show');
 				$('#ID').val(ID);
 				$('#first_name').val(data.first_name);
 				$('#last_name').val(data.last_name);
 				$('#email').val(data.email);
-				$('#password').val(data.password);
 				$('#location_id').val(data.location_id);
+				$('#password').val(data.password);
 				$('.modal-title').html("Edit Member");
 				$('#action').val('updateMember');
 				$('#save').val('Save');
-				tableMembers.ajax.reload();
-
 			}
 		})
 	});
@@ -88,7 +86,7 @@ $(document).ready(function(){
 				method:"POST",
 				data:{ID:ID, action:action},
 				success:function() {					
-					tableMembers.ajax.reload();
+					tableMember.ajax.reload();
 				}
 			})
 		} else {
