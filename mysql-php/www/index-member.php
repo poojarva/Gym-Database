@@ -22,11 +22,13 @@
 
 <body>
 
+<button><a href="logout.php">Log Out</a></button>
+
 <div class="container-fluid mt-3 mb-3">
     <ul>
   <li><a href="classes.php">Basic information about classes</a></li>  
    <li><a href="rooms.php">Basic information about rooms</a></li> 
-  <button><a href="logout.php">Log Out</a></button>
+  
     </ul>
 </div>
 
