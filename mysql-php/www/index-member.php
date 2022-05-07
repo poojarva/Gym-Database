@@ -26,7 +26,7 @@
     <ul>
   <li><a href="classes.php">Basic information about classes</a></li>  
    <li><a href="rooms.php">Basic information about rooms</a></li> 
-  <li><a href="logout.php">Log Out</a></li>
+  <button><a href="logout.php">Log Out</a></button>
     </ul>
 </div>
 
