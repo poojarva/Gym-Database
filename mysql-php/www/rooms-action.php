@@ -60,7 +60,7 @@ class Rooms
 $class = new Classes();
 
 if(!empty($_POST['action']) && $_POST['action'] == 'listRooms') {
-    $class->listClasses();
+    $class->listRooms();
 }
 
 
