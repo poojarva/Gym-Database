@@ -16,7 +16,7 @@
  }
  
 #body {
-  background-image: url("assets/images/halls/background.webp");
+  background-image: url("/assets/images/halls/background.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
