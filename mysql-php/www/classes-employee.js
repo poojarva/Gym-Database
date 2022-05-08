@@ -37,11 +37,11 @@ $(document).ready(function(){
 			method:"POST",
 			data:{
 				ID: $('#ID').val(),
-				first_name: $('#class_name').val(),
-				last_name: $('#limit_capacity').val(),
-				email: $('#max_limit').val(),
-				location_id: $('#class_length').val(),
-				password: $('#employee_id').val(),
+				class_name: $('#class_name').val(),
+				limit_capacity: $('#limit_capacity').val(),
+				max_limit: $('#max_limit').val(),
+				class_length: $('#class_length').val(),
+				employee_id: $('#employee_id').val(),
 				action: $('#action').val(),
 			},
 			success:function(){
