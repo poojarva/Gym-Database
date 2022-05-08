@@ -73,7 +73,7 @@ class Courts
         }
     }
     
-    public function updateCourts()
+    public function updateCourt()
     {
         global $conn;
         
@@ -141,22 +141,22 @@ class Courts
     
 }
 
-$room = new Rooms();
+$court = new Courts();
 
-if(!empty($_POST['action']) && $_POST['action'] == 'listRooms') {
-    $room->listRooms();
+if(!empty($_POST['action']) && $_POST['action'] == 'listCourts') {
+    $court->listCourts();
 }
-if(!empty($_POST['action']) && $_POST['action'] == 'addRoom') {
-    $room->addRoom();
+if(!empty($_POST['action']) && $_POST['action'] == 'getCourt') {
+    $court->getCourt();
 }
-if(!empty($_POST['action']) && $_POST['action'] == 'getRoom') {
-    $room->getRoom();
+if(!empty($_POST['action']) && $_POST['action'] == 'addCourt') {
+    $court->addCourt();
 }
-if(!empty($_POST['action']) && $_POST['action'] == 'updateRoom') {
-    $room->updateRoom();
+if(!empty($_POST['action']) && $_POST['action'] == 'updateCourt') {
+    $court->updateCourt();
 }
-if(!empty($_POST['action']) && $_POST['action'] == 'deleteRoom') {
-    $room->deleteRoom();
+if(!empty($_POST['action']) && $_POST['action'] == 'deleteCourt') {
+    $court->deleteCourt();
 }
 
 
