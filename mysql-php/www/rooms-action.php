@@ -7,8 +7,8 @@ class Rooms
     {
         global $conn;
         
-        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.limit_capacity as 'Room_Limit', r.max_limit as 'Room_Max', l.location_name  as 'Room_Location' FROM rooms r JOIN location l USING (location_id) ";
-       
+        $sqlQuery = "SELECT r.room_id as 'ID', r.room_type 'room_type',  r.limit_capacity as 'limit_capacity', r.max_limit as 'max_limit',  l.location_id  as 'location_id' FROM rooms r JOIN location l USING (location_id)";
+        
         if (! empty($_POST["search"]["value"])) {
             $sqlQuery .= 'WHERE (r.room_type LIKE "%' . $_POST["search"]["value"] . '%") ';
         }
@@ -34,15 +34,14 @@ class Rooms
         while ($sqlRow = $stmt->fetch()) {
             $dataRow = array();
             
-            $dataRow[] = $sqlRow['Room_Id'];
-            $dataRow[] = $sqlRow['Room_Type'];
-            $dataRow[] = $sqlRow['Room_Limit'];
-            $dataRow[] = $sqlRow['Room_Max'];
-            $dataRow[] = $sqlRow['Room_Location'];
-
+            $dataRow[] = $sqlRow['ID'];
+            $dataRow[] = $sqlRow['room_type'];
+            $dataRow[] = $sqlRow['limit_capacity'];
+            $dataRow[] = $sqlRow['max_limit'];
+            $dataRow[] = $sqlRow['location_id'];
             
-            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["Room_Id"] . '" class="btn btn-warning btn-sm update">Book Room</button>
-                          <button type="button" name="delete" emp_id="' . $sqlRow["Room_Id"] . '" class="btn btn-danger btn-sm delete">Unbook Room</button>';
+            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["ID"] . '" class="btn btn-warning btn-sm update">Book Room</button>
+                          <button type="button" name="delete" emp_id="' . $sqlRow["ID"] . '" class="btn btn-danger btn-sm delete" >Unbook Room</button>';
             
             $dataTable[] = $dataRow;
         }
