@@ -36,7 +36,7 @@ $(document).ready(function(){
 			url:"classes-employee-action.php",
 			method:"POST",
 			data:{
-				ID: $('#ID').val(),
+				ID: $('#class_id').val(),
 				first_name: $('#class_name').val(),
 				last_name: $('#limit_capacity').val(),
 				email: $('#max_limit').val(),
