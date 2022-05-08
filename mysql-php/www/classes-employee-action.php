@@ -115,7 +115,7 @@ FROM classes c JOIN instructor_classes l USING (class_id)
     {
         global $conn;
         
-        $sqlQuery = "CALL insertClasses (:class_name, :class_length, 'limit_capacity', :max_limit, :employee_id);";
+        $sqlQuery = "CALL insertClasses(:class_name, :class_length, :limit_capacity, :max_limit, :employee_id);";
         
        // $sqlQuery = "INSERT INTO classes
       //               (class_id, class_name, class_length, limit_capacity, max_limit)

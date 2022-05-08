@@ -67,7 +67,6 @@
 						
 						<label>Class Length</label> <input type="text" class="form-control" id="class_length" placeholder="Example: 01:30:00 -> 1hr30min" required>
 						
-						// need to add the instructor here
 						<label>Instructors</label>
 						<select class="form-control" id="employee_id">
             			    <?php
