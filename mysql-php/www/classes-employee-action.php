@@ -139,19 +139,19 @@ FROM classes c JOIN instructor_classes l USING (class_id)
             // firsrt delete from classes_members
             // then delete from instructor classes
             // then delete from classes
-            $sqlQuery = "DELETE FROM classes_member WHERE class_id = :class_id";
+            $sqlQuery = "DELETE FROM classes_members WHERE class_id = :class_id;";
             
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':class_id', $_POST["ID"]);
             $stmt->execute();
             
-            $sqlQuery = "DELETE FROM instructor_classes WHERE class_id = :class_id";
+            $sqlQuery = "DELETE FROM instructor_classes WHERE class_id = :class_id;";
             
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':class_id', $_POST["ID"]);
             $stmt->execute();
             
-            $sqlQuery = "DELETE FROM classes WHERE class_id = :class_id";
+            $sqlQuery = "DELETE FROM classes WHERE class_id = :class_id;";
             
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':class_id', $_POST["ID"]);
