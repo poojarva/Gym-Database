@@ -71,8 +71,8 @@
 						<label>Instructors</label>
 						<select class="form-control" id="employee_id">
             			    <?php
-            			        $sqlQuery = "SELECT i.employee_id as 'employee_id', CONCAT (u.first_name, ' ', u.last_name) as 'i_name'
-                                    FROM instructor_classes i JOIN employees e
+            			        $sqlQuery = "SELECT e.employee_id as 'employee_id', CONCAT (u.first_name, ' ', u.last_name) as 'i_name'
+                                     employees e
                                  USING (employee_id) JOIN users  u USING (username_id)";
             			        $stmt = $conn->prepare($sqlQuery);
             			        $stmt->execute();
