@@ -63,7 +63,7 @@ class Classes
         
         if ($_POST["ID"]) {
             
-            $sqlQuery = "SELECT  c.class_name as 'class_name', c.limit_capacity as 'limit_capacity', c.max_limit 
+            $sqlQuery = "SELECT  c.class_id as 'class_id' , c.class_name as 'class_name', c.limit_capacity as 'limit_capacity', c.max_limit 
 as 'max_limit', c.class_length as 'class_length', l.employee_id as 'employee_id', u.first_name as 'i_first_name', u.last_name as 'i_last_name' 
 FROM classes c JOIN instructor_classes l USING (class_id)
  JOIN employees e USING (employee_id) JOIN users u USING (username_id); WHERE c.class_id = :class_ID";
@@ -96,7 +96,7 @@ FROM classes c JOIN instructor_classes l USING (class_id)
             $stmt->bindValue(':class_length', $_POST["class_length"]);
             $stmt->bindValue(':max_limit', $_POST["max_limit"]);
             $stmt->bindValue(':limit_capacity', $_POST["limit_capacity"]);
-            $stmt->bindValue(':class_id', $_POST["ID"]);
+            $stmt->bindValue(':class_id', $_POST["class_id"]);
             $stmt->execute();
             
             $sqlQuery = "UPDATE instructor_classes
@@ -106,7 +106,7 @@ FROM classes c JOIN instructor_classes l USING (class_id)
             
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':employee_id', $_POST["employee_id"]);
-            $stmt->bindValue(':class_id', $_POST["ID"]);
+            $stmt->bindValue(':class_id', $_POST["class_id"]);
             $stmt->execute();
         }
     }

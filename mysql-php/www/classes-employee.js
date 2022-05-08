@@ -54,7 +54,7 @@ $(document).ready(function(){
 	});		
 	
 	$("#table-classes").on('click', '.update', function(){
-		var ID = $(this).attr("emp_id");
+	 var ID = $(this).attr("emp_id");
 		var action = 'getClass';
 		$.ajax({
 			url:'classes-employee-action.php',
@@ -63,7 +63,7 @@ $(document).ready(function(){
 			dataType:"json",
 			success:function(data){
 				$('#member-modal').modal('show');
-				$('#ID').val(ID);
+				$('#ID').val(data.class_id);
 				$('#class_name').val(data.class_name);
 				$('#limit_capacity').val(data.limit_capacity);
 				$('#max_limit').val(data.max_limit);
