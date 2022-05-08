@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-		var tableRooms = $('#table-rooms').DataTable({
+	var tableRooms = $('#table-rooms').DataTable({
 		"dom": 'Blfrtip',
 		"autoWidth": false,
 		"processing":true,
@@ -19,6 +19,48 @@ $(document).ready(function(){
 			dataType:"json"
 		}
 	});	
+	
+
+// book room
+	
+	$("#table-rooms").on('click', '.update', function(){
+		var ID = $(this).attr("emp_id");		
+		var action = "updateRoom";
+		if(confirm("Are you sure you want to delete this room?")) {
+			$.ajax({
+				url:'rooms-action.php',
+				method:"POST",
+				data:{ID:ID, action:action},
+				success:function() {					
+					tableRooms.ajax.reload();
+				}
+			})
+		} else {
+			return false;
+		}
+	});
+	
+	
+	
+// unbook room
+	$("#table-rooms").on('click', '.delete', function(){
+		var ID = $(this).attr("emp_id");		
+		var action = "deleteRoom";
+		if(confirm("Are you sure you want to unbook this room?")) {
+			$.ajax({
+				url:'rooms-action.php',
+				method:"POST",
+				data:{ID:ID, action:action},
+				success:function() {					
+					tableRooms.ajax.reload();
+				}
+			})
+		} else {
+			return false;
+		}
+	});
+	
+	
 	
 	
 });
