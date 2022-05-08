@@ -19,14 +19,16 @@ class Classes
             $sqlQuery .= 'ORDER BY c.class_name DESC ';
         }
         
+        if ($_POST["length"] != - 1) {
+                        $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+                    }
+        
         $stmt = $conn->prepare($sqlQuery);
         $stmt->execute();
         
         $numberRows = $stmt->rowCount();
         
-        if ($_POST["length"] != - 1) {
-            $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-        }
+//      
         
         
         $dataTable = array();

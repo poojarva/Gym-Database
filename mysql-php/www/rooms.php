@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Classes</title>
+<title>Rooms</title>
 <?php require_once('header.php'); ?>
 <!-- My JS libraries -->
 <script src="rooms.js"></script>
