@@ -63,7 +63,7 @@ $(document).ready(function(){
 			dataType:"json",
 			success:function(data){
 				$('#member-modal').modal('show');
-				$('#ID').val(ID);
+				$('#ID').val(data.ID);
 				$('#class_name').val(data.class_name);
 				$('#limit_capacity').val(data.limit_capacity);
 				$('#max_limit').val(data.max_limit);
