@@ -26,7 +26,7 @@
 <div class="container-fluid mt-3 mb-3">
     <ul>
   <li><a href="classes-employee.php">Basic information about classes</a></li>  
-   <li><a href="rooms.php">Basic information about rooms</a></li> 
+   <li><a href="rooms-employee.php">Basic information about rooms</a></li> 
 <li><a href="member.php">Information about members</a></li>  
   <!--  include information about employees and adding/dropping them -->
     </ul>
