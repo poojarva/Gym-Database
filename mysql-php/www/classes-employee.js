@@ -76,6 +76,24 @@ $(document).ready(function(){
 		})
 	});
 	
+	$("#table-classes").on('click', '.delete', function(){
+		var ID = $(this).attr("emp_id");		
+		var action = "deleteClass";
+		if(confirm("Are you sure you want to delete this class?")) {
+			$.ajax({
+				url:'classes-employee-action.php',
+				method:"POST",
+				data:{ID:ID, action:action},
+				success:function() {					
+					tableClasses.ajax.reload();
+				}
+			})
+		} else {
+			return false;
+		}
+	});
+	
+	
 	
 	
 });
