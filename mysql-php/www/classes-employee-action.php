@@ -63,7 +63,7 @@ class Classes
         
         if ($_POST["ID"]) {
             
-            $sqlQuery = "SELECT c.class_id as 'ID', c.class_name as 'class_name', c.limit_capacity as 'limit_capacity', c.max_limit 
+            $sqlQuery = "SELECT  c.class_name as 'class_name', c.limit_capacity as 'limit_capacity', c.max_limit 
 as 'max_limit', c.class_length as 'class_length', l.employee_id as 'employee_id', u.first_name as 'i_first_name', u.last_name as 'i_last_name' 
 FROM classes c JOIN instructor_classes l USING (class_id)
  JOIN employees e USING (employee_id) JOIN users u USING (username_id); WHERE c.class_id = :class_ID";
