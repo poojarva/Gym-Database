@@ -56,11 +56,11 @@
 					<div class="form-group">
 
 												
-						<label>Room Type</label><input type="text" class="form-control" id="room_type" placeholder="Enter Class name" required>
+						<label>Room Type</label><input type="text" class="form-control" id="room_type" placeholder="Enter Room name" required>
 						
 					    <label>Current Limit</label> <input type="text" class="form-control" id="limit_capacity" placeholder="Enter the Limit (Same as Maximum)" required>						
 						
-						<label>Max Limit</label> <input type="text" class="form-control" id="max_limit" placeholder="Enter Maximum Limit for Class" required>						
+						<label>Max Limit</label> <input type="text" class="form-control" id="max_limit" placeholder="Enter Maximum Limit for Room" required>						
 												
 					<label>Location ID</label>
 						<select class="form-control" id="location_id">

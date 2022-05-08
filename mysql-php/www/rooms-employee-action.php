@@ -62,11 +62,11 @@ class Rooms
         if ($_POST["ID"]) {
             
             $sqlQuery = "SELECT r.room_id as 'ID', r.room_type 'room_type',  r.limit_capacity as 'limit_capacity',
- r.max_limit as 'max_limit',  l.location_id  as 'location_id' FROM rooms r JOIN location l USING (location_id)";
+ r.max_limit as 'max_limit',  l.location_id  as 'location_id' FROM rooms r JOIN location l USING (location_id) WHERE room_id = :room_id";
             
             
             $stmt = $conn->prepare($sqlQuery);
-            $stmt->bindValue(':class_ID', $_POST["ID"]);
+            $stmt->bindValue(':room_id', $_POST["ID"]);
             $stmt->execute();
             
             echo json_encode($stmt->fetch());
