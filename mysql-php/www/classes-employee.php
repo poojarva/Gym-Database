@@ -3,6 +3,16 @@
 <title>Classes</title>
 <?php require_once('header.php'); ?>
 <!-- My JS libraries -->
+<!-- Font Awesome library -->
+<script src="https://kit.fontawesome.com/aec5ef1467.js"></script>
+
+<!-- JS libraries for datatables buttons-->
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.5/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 <script src="classes-employee.js"></script>
 </head>
 
@@ -12,6 +22,11 @@
 
 <div class="container-fluid mt-3 mb-3">
 	<h4>Classes</h4>
+	
+	<div class="pb-3">
+		<button type="button" id="addClass" class="btn btn-primary btn-sm">Add Class</button>
+	</div> 
+	
 	<div>
 		<table id="table-classes" class="table table-bordered table-striped">
 			<thead>
@@ -54,7 +69,7 @@
 						
 						// need to add the instructor here
 						<label>Instructors</label>
-						<select class="form-control" id="instructor_id">
+						<select class="form-control" id="employee_id">
             			    <?php
             			        $sqlQuery = "SELECT i.employee_id as 'employee_id', CONCAT (u.first_name, ' ', u.last_name) as 'i_name'
                                     FROM instructor_classes i JOIN employees e
