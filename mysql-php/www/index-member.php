@@ -14,6 +14,24 @@
      top:0;
      right:0;
  }
+ 
+#body {
+  background-image: url('assets/images/halls/background.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
 
 </style>
 
@@ -30,8 +48,8 @@
 
 <div class="container-fluid mt-3 mb-3">
     <ul>
-  <li><a href="classes.php">Basic information about classes</a></li>  
-   <li><a href="rooms.php">Basic information about rooms</a></li> 
+  <button class="block"><a href="classes.php">Basic information about classes</a></button>  
+  <button class="block"><a href="rooms.php">Basic information about rooms</a></button> 
   
     </ul>
 </div>
