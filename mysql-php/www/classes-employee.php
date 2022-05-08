@@ -57,7 +57,7 @@
 					<div class="form-group">
 
 						
-						<label>Class ID</label> <input type="number" class="form-control" id="class_id" placeholder="Enter Class ID" required>
+<!-- 						<label>Class ID</label> <input type="number" class="form-control" id="class_id" placeholder="Enter Class ID" required> -->
 						
 						<label>Class Name</label><input type="text" class="form-control" id="class_name" placeholder="Enter Class name" required>
 						

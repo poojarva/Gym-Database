@@ -36,7 +36,7 @@ $(document).ready(function(){
 			url:"classes-employee-action.php",
 			method:"POST",
 			data:{
-				ID: $('#class_id').val(),
+				ID: $('#ID').val(),
 				first_name: $('#class_name').val(),
 				last_name: $('#limit_capacity').val(),
 				email: $('#max_limit').val(),
@@ -63,7 +63,7 @@ $(document).ready(function(){
 			dataType:"json",
 			success:function(data){
 				$('#member-modal').modal('show');
-				$('#ID').val(data.class_id);
+				$('#ID').val(ID);
 				$('#class_name').val(data.class_name);
 				$('#limit_capacity').val(data.limit_capacity);
 				$('#max_limit').val(data.max_limit);
