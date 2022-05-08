@@ -18,7 +18,8 @@
 				<tr>
 					<th>Class ID</th> 
 					<th>Class Name</th>
-					<th>Class Limit</th>
+					<th>Class Current Limit</th>
+					<th>Class Max Limit</th>
 					<th>Class Length</th>
 					<th>Instructor First Name</th>
 					<th>Instructor Last Name</th>

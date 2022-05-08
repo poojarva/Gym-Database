@@ -7,10 +7,10 @@ class Classes
     {
         global $conn;
         
-        $sqlQuery = "SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.class_length as 'Limit', c.class_length as 'Class_Length', u.first_name as 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes l USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id)";
+        $sqlQuery = "SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.limit_capacity as 'Class_Limit', c.max_limit as 'Class_Max', c.class_length as 'Class_Length', u.first_name as 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes l USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id)";
         
         if (! empty($_POST["search"]["value"])) {
-            $sqlQuery .= 'WHERE (c.class_id LIKE "%' . $_POST["search"]["value"] . '%" OR c.class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
+            $sqlQuery .= 'WHERE (c.class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
         }
         
         if (! empty($_POST["order"])) {
@@ -36,7 +36,8 @@ class Classes
             
             $dataRow[] = $sqlRow['Class_Id'];
             $dataRow[] = $sqlRow['Class_Name'];
-            $dataRow[] = $sqlRow['Limit'];
+            $dataRow[] = $sqlRow['Class_Limit'];
+            $dataRow[] = $sqlRow['Class_Max'];
             $dataRow[] = $sqlRow['Class_Length'];
             $dataRow[] = $sqlRow['Instructor_First_Name'];
             $dataRow[] = $sqlRow['Instructor_Last_Name'];

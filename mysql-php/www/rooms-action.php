@@ -7,7 +7,7 @@ class Rooms
     {
         global $conn;
         
-        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.room_capacity as 'Room_Limit', l.location_name  as 'Room_Location' FROM rooms r JOIN location l USING (location_id)";
+        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.limit_capacity as 'Room_Limit', r.max_limit as 'Room_Max', l.location_name  as 'Room_Location' FROM rooms r JOIN location l USING (location_id)";
         
                 if (! empty($_POST["search"]["value"])) {
                     $sqlQuery .= 'WHERE (r.room_type LIKE "%' . $_POST["search"]["value"] . '%") ';
@@ -37,6 +37,7 @@ class Rooms
             $dataRow[] = $sqlRow['Room_Id'];
             $dataRow[] = $sqlRow['Room_Type'];
             $dataRow[] = $sqlRow['Room_Limit'];
+            $dataRow[] = $sqlRow['Room_Max'];
             $dataRow[] = $sqlRow['Room_Location'];
 
             

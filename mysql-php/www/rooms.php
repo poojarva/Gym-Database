@@ -18,7 +18,8 @@
 				<tr>
 					<th>Room ID</th> 
 					<th>Room Type</th>
-					<th>Room Limit</th>
+					<th>Room Current Limit</th>
+					<th>Room Max Limit</th>
 					<th>Room Location</th>
 					<th>Actions</th>
 				</tr>
