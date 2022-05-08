@@ -3,7 +3,7 @@
 <title>Gym Database Members</title>
 <?php require_once('header.php'); ?>
 <style>
-button {
+#button {
      line-height: 12px;
      width: 18px;
      font-size: 8pt;
@@ -15,7 +15,7 @@ button {
      right:0;
  }
  
-body {
+#body {
   background-image: url("assets/images/halls/background.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
