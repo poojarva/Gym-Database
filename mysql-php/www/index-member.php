@@ -16,7 +16,14 @@
  }
  
 #body {
-  background-image: url("background.png");
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.background {
+background-image: url('background.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -151,7 +158,7 @@
 
 <?php require_once('connection-member.php'); ?>
 
-<body>
+<body class="background">
 
 <button><a href="logout.php">Log Out</a></button>
 
