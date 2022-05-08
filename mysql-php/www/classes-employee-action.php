@@ -115,7 +115,7 @@ FROM classes c JOIN instructor_classes l USING (class_id)
     {
         global $conn;
         
-        $sqlQuery = "CALL insertClasses (:class_name, :class_length, 'limit_capacity', :max_limit, :employee_id";
+        $sqlQuery = "CALL insertClasses (:class_name, :class_length, 'limit_capacity', :max_limit, :employee_id);";
         
        // $sqlQuery = "INSERT INTO classes
       //               (class_id, class_name, class_length, limit_capacity, max_limit)
@@ -126,7 +126,7 @@ FROM classes c JOIN instructor_classes l USING (class_id)
 //         $stmt->bindValue(':class_id', $_POST["ID"]);
         $stmt->bindValue(':class_name', $_POST["class_name"]);
         $stmt->bindValue(':class_length', $_POST["class_length"]);
-        $stmt->bindValue(':limit_capacity', $_POST["max_limit"]);
+        $stmt->bindValue(':limit_capacity', $_POST["limit_capacity"]);
         $stmt->bindValue(':max_limit', $_POST["max_limit"]);
         $stmt->bindValue(':employee_id', $_POST["employee_id"]);
         
