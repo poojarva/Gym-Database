@@ -61,11 +61,11 @@
 						
 						<label>Class Name</label><input type="text" class="form-control" id="class_name" placeholder="Enter Class name" required>
 						
-					    <label>Current Limit</label> <input type="text" class="form-control" id="limit_capacity" placeholder="Enter Current Limit for Class" required>						
+					    <label>Current Limit</label> <input type="text" class="form-control" id="limit_capacity" placeholder="Enter the Limit (Same as Maximum)" required>						
 						
 						<label>Max Limit</label> <input type="text" class="form-control" id="max_limit" placeholder="Enter Maximum Limit for Class" required>						
 						
-						<label>Class Length</label> <input type="text" class="form-control" id="class_length" placeholder="Enter Length of Class" required>
+						<label>Class Length</label> <input type="text" class="form-control" id="class_length" placeholder="Example: 01:30:00 -> 1hr30min" required>
 						
 						// need to add the instructor here
 						<label>Instructors</label>
