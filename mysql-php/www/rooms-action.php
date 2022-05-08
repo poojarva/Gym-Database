@@ -7,7 +7,7 @@ class Rooms
     {
         global $conn;
         
-        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.room_capacity as 'Room_Limit', l.location_name  as 'Room_Location' FROM rooms r JOIN location l USING (location_id);";
+        $sqlQuery = "SELECT r.room_id as 'Room_Id', r.room_type 'Room_Type',  r.room_capacity as 'Room_Limit', l.location_name  as 'Room_Location' FROM rooms r JOIN location l USING (location_id)";
         
 //                 if (! empty($_POST["search"]["value"])) {
 //                     $sqlQuery .= 'WHERE (r.room_type LIKE "%' . $_POST["search"]["value"] . '%") ';

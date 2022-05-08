@@ -7,26 +7,26 @@ class Classes
     {
         global $conn;
         
-        $sqlQuery = "SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.class_length as 'Limit', c.class_length as 'Class_Length', u.first_name as 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes l USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id);";
+        $sqlQuery = "SELECT c.class_id as 'Class_Id', c.class_name 'Class_Name',  c.class_length as 'Limit', c.class_length as 'Class_Length', u.first_name as 'Instructor_First_Name', u.last_name as 'Instructor_Last_Name' FROM classes c JOIN instructor_classes l USING (class_id) JOIN employees e USING (employee_id) JOIN users u USING (username_id)";
         
-//         if (! empty($_POST["search"]["value"])) {
-//             $sqlQuery .= 'WHERE (c.class_id LIKE "%' . $_POST["search"]["value"] . '%" OR c.class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
-//         }
+        if (! empty($_POST["search"]["value"])) {
+            $sqlQuery .= 'WHERE (c.class_id LIKE "%' . $_POST["search"]["value"] . '%" OR c.class_name LIKE "%' . $_POST["search"]["value"] . '%") ';
+        }
         
-//         if (! empty($_POST["order"])) {
-//             $sqlQuery .= 'ORDER BY ' . ($_POST['order']['0']['column'] + 1) . ' ' . $_POST['order']['0']['dir'] . ' ';
-//         } else {
-//             $sqlQuery .= 'ORDER BY c.class_name DESC ';
-//         }
+        if (! empty($_POST["order"])) {
+            $sqlQuery .= 'ORDER BY ' . ($_POST['order']['0']['column'] + 1) . ' ' . $_POST['order']['0']['dir'] . ' ';
+        } else {
+            $sqlQuery .= 'ORDER BY c.class_name DESC ';
+        }
         
         $stmt = $conn->prepare($sqlQuery);
         $stmt->execute();
         
         $numberRows = $stmt->rowCount();
         
-//         if ($_POST["length"] != - 1) {
-//             $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
-//         }
+        if ($_POST["length"] != - 1) {
+            $sqlQuery .= 'LIMIT ' . $_POST['start'] . ', ' . $_POST['length'];
+        }
         
         
         $dataTable = array();
