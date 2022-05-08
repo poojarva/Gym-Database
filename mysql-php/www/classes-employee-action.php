@@ -88,7 +88,7 @@ FROM classes c JOIN instructor_classes l USING (class_id)
                             class_name = :class_name,
                             class_length = :class_length,
                             max_limit = :max_limit,
-                            limit_capacity = :limit_capacity,
+                            limit_capacity = :limit_capacity
                             WHERE class_id = :class_id";
             
             $stmt = $conn->prepare($sqlQuery);
@@ -101,7 +101,7 @@ FROM classes c JOIN instructor_classes l USING (class_id)
             
             $sqlQuery = "UPDATE instructor_classes
                             SET
-                            employee_id = :employee_id,                           
+                            employee_id = :employee_id                           
                             WHERE class_id = :class_id";
             
             $stmt = $conn->prepare($sqlQuery);
