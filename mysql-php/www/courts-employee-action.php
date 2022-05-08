@@ -61,7 +61,7 @@ class Courts
         
         if ($_POST["ID"]) {
             
-            $sqlQuery = "SELECT c.court_id as 'ID', c.court_type 'room_type',  c.limit_capacity as 'limit_capacity',
+            $sqlQuery = "SELECT c.court_id as 'ID', c.court_type 'court_type',  c.limit_capacity as 'limit_capacity',
  c.max_limit as 'max_limit',  l.location_id  as 'location_id' FROM courts c JOIN location l USING (location_id) WHERE court_id = :court_id";
             
             
