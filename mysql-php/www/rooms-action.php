@@ -142,11 +142,9 @@ if(!empty($_POST['action']) && $_POST['action'] == 'listRoomsBooked'){
 }
 if(!empty($_POST['action']) && $_POST['action'] == 'updateRoom') {
     $room->updateRoom();
-//     $room->listRoomsBooked();
 }
 if(!empty($_POST['action']) && $_POST['action'] == 'deleteRoom') {
     $room->deleteRoom();
-//     $room->listRoomsBooked();
     
 }
 
