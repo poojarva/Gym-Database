@@ -14,7 +14,7 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
-<script src="class.js"></script>
+<script src="classes.js"></script>
 </head>
 
 <?php require_once('connection-member.php'); ?>

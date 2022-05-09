@@ -86,7 +86,7 @@ var ID = $(this).attr("emp_id");
 		var action = "deleteClass";
 		if(confirm("Are you sure you want to unbook this class?")) {
 			$.ajax({
-				url:'class-action.php',
+				url:'classes-action.php',
 				method:"POST",
 				data:{ID:ID, action:action},
 				success:function() {					
