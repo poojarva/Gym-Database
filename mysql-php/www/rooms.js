@@ -20,14 +20,7 @@ $(document).ready(function(){
 		}
 	});	
 	
-	
-	$("#addRoom").click(function(){
-		$('#member-form')[0].reset();
-		$('#member-modal').modal('show');
-		$('.modal-title').html("Add Room");
-		$('#action').val('addRoom');
-		$('#save').val('Add');
-	});
+
 	
 		$("#member-modal").on('submit','#member-form', function(event){
 		event.preventDefault();

@@ -40,8 +40,8 @@ class Rooms
             $dataRow[] = $sqlRow['max_limit'];
             $dataRow[] = $sqlRow['location_id'];
             
-            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["ID"] . '" class="btn btn-warning btn-sm update">Update Room</button>
-                          <button type="button" name="delete" emp_id="' . $sqlRow["ID"] . '" class="btn btn-danger btn-sm delete" >Delete Room</button>';
+            $dataRow[] = '<button type="button" name="update" emp_id="' . $sqlRow["ID"] . '" class="btn btn-warning btn-sm update">Book Room</button>
+                          <button type="button" name="delete" emp_id="' . $sqlRow["ID"] . '" class="btn btn-danger btn-sm delete" >Unbook Room</button>';
             
             $dataTable[] = $dataRow;
         }
@@ -54,49 +54,8 @@ class Rooms
         
         echo json_encode($output);
     }
-    
-    public function getRoom()
-    {
-        global $conn;
-        
-        if ($_POST["ID"]) {
-            
-            $sqlQuery = "SELECT r.room_id as 'ID', r.room_type 'room_type',  r.limit_capacity as 'limit_capacity',
- r.max_limit as 'max_limit',  l.location_id  as 'location_id' FROM rooms r JOIN location l USING (location_id) WHERE room_id = :room_id";
-            
-            
-            $stmt = $conn->prepare($sqlQuery);
-            $stmt->bindValue(':room_id', $_POST["ID"]);
-            $stmt->execute();
-            
-            echo json_encode($stmt->fetch());
-        }
-    }
-    
-    public function addRoom()
-    {
-        global $conn;
-        
-        if ($_POST['ID']) {
-            
-            $sqlQuery = "UPDATE rooms
-                            SET
-                            room_type = :room_type,
-                            location_id = :location_id,
-                            max_limit = :max_limit,
-                            limit_capacity = :limit_capacity
-                            WHERE room_id = :room_id";
-            
-            $stmt = $conn->prepare($sqlQuery);
-            $stmt->bindValue(':room_type', $_POST["room_type"]);
-            $stmt->bindValue(':location_id', $_POST["location_id"]);
-            $stmt->bindValue(':max_limit', $_POST["max_limit"]);
-            $stmt->bindValue(':limit_capacity', $_POST["limit_capacity"]);
-            $stmt->bindValue(':room_id', $_POST['ID']);
-            $stmt->execute();
-            
-        }
-    }
+
+
     
     public function updateRoom()
     {
@@ -105,7 +64,7 @@ class Rooms
         global $conn;
         if ($_POST["ID"]) {
                 
-            
+            // need to do a little check to see if the user has already booked that room
             $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':room_id', $_POST["ID"]);
@@ -113,6 +72,8 @@ class Rooms
             
             $stmt->execute();
         
+            echo '<script>alert("You have successfully booked this room!")</script>';
+         
         
         
     }
@@ -146,12 +107,6 @@ $room = new Rooms();
 
 if(!empty($_POST['action']) && $_POST['action'] == 'listRooms') {
     $room->listRooms();
-}
-if(!empty($_POST['action']) && $_POST['action'] == 'addRoom') {
-    $room->addRoom();
-}
-if(!empty($_POST['action']) && $_POST['action'] == 'getRoom') {
-    $room->getRoom();
 }
 if(!empty($_POST['action']) && $_POST['action'] == 'updateRoom') {
     $room->updateRoom();
