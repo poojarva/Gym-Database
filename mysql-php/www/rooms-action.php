@@ -1,7 +1,3 @@
-<html>
-                    <head>
-                    </head>
-                    <body>
 <?php
 require_once ('connection-member.php');
 
@@ -77,9 +73,9 @@ class Rooms
                 // this means that the user has already booked it
                 if (!empty($queryResult)){
                    
-                    echo '<script>';
-                    echo 'alert("You have already booked this room! Try booking another room")';
-                    echo '</script>';
+//                     echo '<script>';
+                    echo "You have already booked this room! Try booking another room";
+//                     echo '</script>';
                     
                     
                 }
@@ -145,5 +141,3 @@ if(!empty($_POST['action']) && $_POST['action'] == 'deleteRoom') {
 
 
 ?>
-</body>
-                      </html>
