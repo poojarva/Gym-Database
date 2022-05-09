@@ -61,7 +61,6 @@ class Rooms
     {
         global $conn;
         
-        global $conn;
         if ($_POST["ID"]) {
             $sqlQuery = "SELECT room_id FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id;" ;
                 $stmt = $conn->prepare($sqlQuery);
@@ -74,7 +73,7 @@ class Rooms
                 if (!empty($queryResult)){
                    
 //                     echo '<script>';
-                    echo "You have already booked this room! Try booking another room";
+//                     echo "You have already booked this room! Try booking another room";
 //                     echo '</script>';
                     
                     
@@ -87,14 +86,14 @@ class Rooms
                     
                     $stmt->execute();
                     
-                    $sqlQuery = "UPDATE rooms SET limit_capacity = limit_capacity-1 WHERE room_id = :room_id;";
+                    $sqlQuery = "UPDATE rooms SET limit_capacity = (limit_capacity-1) WHERE room_id = :room_id;";
                     $stmt = $conn->prepare($sqlQuery);
                     $stmt->bindValue(':room_id', $_POST["ID"]);
                     $stmt->bindValue(':username_id', $_SESSION['username_id']);
                     
                     $stmt->execute();
  
-                    echo '<script> alert("You booked this room!"); </script>';
+//                     echo '<script> alert("You booked this room!"); </script>';
                   
                 }           
         
@@ -106,25 +105,49 @@ class Rooms
     public function deleteRoom()
     {
         global $conn;
+        
         if ($_POST["ID"]) {
-            
-            $sqlQuery = "DELETE FROM users_rooms WHERE room_id = :room_id;";
-            
+            $sqlQuery = "SELECT room_id FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id;" ;
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':room_id', $_POST["ID"]);
+            $stmt->bindValue(':username_id', $_SESSION['username_id']);
             $stmt->execute();
+            $queryResult = $stmt->fetch();
             
-            $sqlQuery = "DELETE FROM rooms WHERE room_id = :room_id;";
+            // this means that the user has already booked it
+            if (!empty($queryResult)){
+                
+                //                     echo '<script>';
+                //                     echo "You have already booked this room! Try booking another room";
+                //                     echo '</script>';
+                
+                
+            }
+            else{
+                $sqlQuery = "DELETE users_rooms WHERE username_id = :username_id AND room_id = :room_id);";
+                $stmt = $conn->prepare($sqlQuery);
+                $stmt->bindValue(':room_id', $_POST["ID"]);
+                $stmt->bindValue(':username_id', $_SESSION['username_id']);
+                
+                $stmt->execute();
+                
+                $sqlQuery = "UPDATE rooms SET limit_capacity = (limit_capacity+1) WHERE room_id = :room_id;";
+                $stmt = $conn->prepare($sqlQuery);
+                $stmt->bindValue(':room_id', $_POST["ID"]);
+                $stmt->bindValue(':username_id', $_SESSION['username_id']);
+                
+                $stmt->execute();
+                
+                //                     echo '<script> alert("You booked this room!"); </script>';
+                
+            }
             
-            $stmt = $conn->prepare($sqlQuery);
-            $stmt->bindValue(':room_id', $_POST["ID"]);
-            $stmt->execute();
         }
-    }
     
     
     
     
+}
 }
 
 $room = new Rooms();
