@@ -62,41 +62,13 @@ class Rooms
         global $conn;
         
         if ($_POST["ID"]) {
-            $sqlQuery = "SELECT room_id FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id;" ;
+            $sqlQuery = "CALL addMemberToRoom(:room_id, :username_id);" ;
                 $stmt = $conn->prepare($sqlQuery);
                 $stmt->bindValue(':room_id', $_POST["ID"]);
                 $stmt->bindValue(':username_id', $_SESSION['username_id']);
                 $stmt->execute();
-                $queryResult = $stmt->fetch();
-                
-                // this means that the user has already booked it
-                if (!empty($queryResult)){
-                   
-//                     echo '<script>';
-//                     echo "You have already booked this room! Try booking another room";
-//                     echo '</script>';
-                    
-                    
-                }
-                else{
-                    $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
-                    $stmt = $conn->prepare($sqlQuery);
-                    $stmt->bindValue(':room_id', $_POST["ID"]);
-                    $stmt->bindValue(':username_id', $_SESSION['username_id']);
-                    
-                    $stmt->execute();
-                    
-                    $sqlIncreaseQuery = "UPDATE rooms SET limit_capacity = (limit_capacity-1) WHERE room_id = :room_id;";
-                    $Incstmt = $conn->prepare($sqlIncreaseQuery);
-                    $Incstmt->bindValue(':room_id', $_POST["ID"]);
-                    $Incstmt->bindValue(':username_id', $_SESSION['username_id']);
-                    
-                    $Incstmt->execute();
- 
-//                     echo '<script> alert("You booked this room!"); </script>';
-                  
-                }           
-        
+                       
+                           
     }
    
     
@@ -107,40 +79,13 @@ class Rooms
         global $conn;
         
         if ($_POST["ID"]) {
-            $sqlQuery = "SELECT room_id FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id;" ;
+            $sqlQuery = "CALL removeMemberFromRoom(:room_id, :username_id);" ;
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':room_id', $_POST["ID"]);
             $stmt->bindValue(':username_id', $_SESSION['username_id']);
             $stmt->execute();
-            $queryResult = $stmt->fetch();
+           
             
-            // this means that the user hasn't already booked it
-            if (empty($queryResult)){
-                
-                //                     echo '<script>';
-                //                     echo "You have already booked this room! Try booking another room";
-                //                     echo '</script>';
-                
-                
-            }
-            else{
-                $sqlQuery = "DELETE FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id);";
-                $stmt = $conn->prepare($sqlQuery);
-                $stmt->bindValue(':room_id', $_POST["ID"]);
-                $stmt->bindValue(':username_id', $_SESSION['username_id']);
-                
-                $stmt->execute();
-                
-                $sqlDecQuery = "UPDATE rooms SET limit_capacity = (limit_capacity+1) WHERE room_id = :room_id;";
-                $Decstmt = $conn->prepare($sqlDecQuery);
-                $Decstmt->bindValue(':room_id', $_POST["ID"]);
-                $Decstmt->bindValue(':username_id', $_SESSION['username_id']);
-                
-                $Decstmt->execute();
-                
-                //                     echo '<script> alert("You booked this room!"); </script>';
-                
-            }
             
         }
     
