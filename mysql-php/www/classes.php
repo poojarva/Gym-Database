@@ -39,6 +39,7 @@
 					<th>Instructor First Name</th>
 					<th>Instructor Last Name</th>
 					<th>Actions</th>
+					
 				</tr>
 			</thead>
 		</table>

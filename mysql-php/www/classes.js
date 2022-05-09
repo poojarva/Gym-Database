@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-	var tableClasses = $('#table-classes').DataTable({
+		var tableClasses = $('#table-classes').DataTable({
 		"dom": 'Blfrtip',
 		"autoWidth": false,
 		"processing":true,
@@ -19,6 +19,7 @@ $(document).ready(function(){
 			dataType:"json"
 		}
 	});	
+	
 	
 	var tableClassesBooked = $('#table-classes-booked').DataTable({
 		"dom": 'Blfrtip',
@@ -78,6 +79,8 @@ var ID = $(this).attr("emp_id");
 			return false;
 		}
 	});
+	
+	
 	$("#table-classes").on('click', '.delete', function(){
 		var ID = $(this).attr("emp_id");		
 		var action = "deleteClass";
