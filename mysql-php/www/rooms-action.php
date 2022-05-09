@@ -63,7 +63,7 @@ class Rooms
         
         global $conn;
         if ($_POST["ID"]) {
-            $sqlQuery = "SELECT * FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id;" ;
+            $sqlQuery = "SELECT room_id FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id;" ;
                 $stmt = $conn->prepare($sqlQuery);
                 $stmt->bindValue(':room_id', $_POST["ID"]);
                 $stmt->bindValue(':username_id', $_SESSION['username_id']);
@@ -74,14 +74,18 @@ class Rooms
                 if (!empty($queryResult)){
                    
                     ?>
+                    <html>
+                    <head>
+                    </head>
                     <body>
                     <?php
-                    
-                    echo '<script>alert("You have already booked this room! Try booking another room")</script>';
+                    echo '<script>';
+                    echo 'alert("You have already booked this room! Try booking another room")';
+                    echo '</script>';
                     ?>
-</body>
-
-<?php
+                     </body>
+                      </html>
+                       <?php
                     
                 }
                 else{
@@ -99,19 +103,17 @@ class Rooms
                     
                     $stmt->execute();
                     ?>
+                    <html>
+                    <head>
+                    </head>
                     <body>
                     <?php
-                   
-                    
-                    echo '<script>alert("You booked this room!")</script>';
-                    ?>
-</body>
-<?php
+                    echo '<script> alert("You booked this room!"); </script>';
+                    ?> </body> 
+                    </html> 
+                    <?php
                   
-                }
-            // need to do a little check to see if the user has already booked that room
-           
-            
+                }           
         
     }
    
