@@ -24,7 +24,9 @@
 <div class="container-fluid mt-3 mb-3">
 	<h4>Rooms</h4>
 	
-
+	<div class="pb-3">
+		<button type="button" id="addRoom" class="btn btn-primary btn-sm">Add Room</button>
+	</div> 
 	
 	<div>
 		<table id="table-rooms" class="table table-bordered table-striped">
