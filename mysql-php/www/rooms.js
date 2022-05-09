@@ -88,6 +88,8 @@ var ID = $(this).attr("emp_id");
 				data:{ID:ID, action:action},
 				success:function() {					
 					tableRooms.ajax.reload();
+				    tableRoomsBooked.ajax.reload();
+
 				}
 			})
 		} else {
