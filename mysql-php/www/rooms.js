@@ -50,7 +50,7 @@ $(document).ready(function(){
 	$("#table-rooms").on('click', '.update', function(){
 		var ID = $(this).attr("emp_id");		
 		var action = "updateRoom";
-		if(confirm("Are you sure you want to delete this room?")) {
+		if(confirm("Are you sure you want to book this room?")) {
 			$.ajax({
 				url:'rooms-action.php',
 				method:"POST",
