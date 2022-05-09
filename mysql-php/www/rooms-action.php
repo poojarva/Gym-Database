@@ -63,18 +63,42 @@ class Rooms
         
         global $conn;
         if ($_POST["ID"]) {
+            $sqlQuery = "SELECT * FROM users_rooms WHERE username_id = :username_id AND room_id = :room_id;" ;
+                $stmt = $conn->prepare($sqlQuery);
+                $stmt->bindValue(':room_id', $_POST["ID"]);
+                $stmt->bindValue(':username_id', $_SESSION['username_id']);
+                $stmt->execute();
+                $queryResult = $stmt->fetch();
                 
+                // this means that the user has already booked it
+                if (!empty($queryResult)){
+                    echo '<script>alert("You have already booked this room! Try booking another room")</script>';
+                    echo "You have already booked this room! Try booking another room";
+                    
+                }
+                else{
+                    $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
+                    $stmt = $conn->prepare($sqlQuery);
+                    $stmt->bindValue(':room_id', $_POST["ID"]);
+                    $stmt->bindValue(':username_id', $_SESSION['username_id']);
+                    
+                    $stmt->execute();
+                    
+                    $sqlQuery = "UPDATE rooms SET limit_capacity = limit_capacity-1 WHERE room_id = :room_id;";
+                    $stmt = $conn->prepare($sqlQuery);
+                    $stmt->bindValue(':room_id', $_POST["ID"]);
+                    $stmt->bindValue(':username_id', $_SESSION['username_id']);
+                    
+                    $stmt->execute();
+                    echo '<script>alert("You booked this room!")</script>';
+                    echo "You booked this room!";
+                }
             // need to do a little check to see if the user has already booked that room
-            $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
-            $stmt = $conn->prepare($sqlQuery);
-            $stmt->bindValue(':room_id', $_POST["ID"]);
-            $stmt->bindValue(':username_id', $_SESSION['username_id']);
+           
             
-            $stmt->execute();         
-        
         
     }
-    echo "<script>alert('You have successfully booked this room!');</script>";
+   
     
     }
     
