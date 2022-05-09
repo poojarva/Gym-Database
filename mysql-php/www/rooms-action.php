@@ -66,7 +66,7 @@ class Rooms
             $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':room_id', $_POST["ID"]);
-            $stmt->bindValue(':username_id', $_SESSION['username_id']);
+            $stmt->bindValue(':username_id', $_SESSION["username_id"]);
             
             $stmt->execute();
          

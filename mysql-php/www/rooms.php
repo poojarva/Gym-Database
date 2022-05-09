@@ -37,5 +37,46 @@
 	</div>
 </div>
 
+<div id="member-modal" class="modal fade">
+	<div class="modal-dialog">
+		<form method="post" id="member-form">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Edit Rooms</h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+
+												
+						<label>Room Type</label><input type="text" class="form-control" id="room_type" placeholder="Enter Room name" required>
+						
+					    <label>Current Limit</label> <input type="text" class="form-control" id="limit_capacity" placeholder="Enter the Limit (Same as Maximum)" required>						
+						
+						<label>Max Limit</label> <input type="text" class="form-control" id="max_limit" placeholder="Enter Maximum Limit for Room" required>						
+												
+					<label>Location ID</label>
+						<select class="form-control" id="location_id">
+            			    <?php
+            			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
+            			        $stmt = $conn->prepare($sqlQuery);
+            			        $stmt->execute();
+            			        while ($row = $stmt->fetch()) {
+            			            echo "<option value=\"" . $row["location_id"] . "\">" . $row["location_name"] . "</option>";
+            			        }
+                            ?>
+            			</select>
+					
+					
+				</div>
+				<div class="modal-footer">
+					<input type="hidden" name="ID" id="ID"/>
+					<input type="hidden" name="action" id="action" value=""/>
+					<input type="submit" name="save" id="save" class="btn btn-info" value="Save" />
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 </body>
 </html>
