@@ -24,8 +24,8 @@
 <div class="container-fluid mt-3 mb-3">
 	<h4>Rooms</h4>
 	
-	<h1>Reminder: Check the table below to see if you have already booked a spot in that room! 
-	If you have already booked the room, the 'Current Room Limit' will not change - please unbook the room if you have already booked that room!</h1>
+	<h6>Reminder: Check the table below to see if you have already booked a spot in that room! 
+	If you have already booked the room, the 'Current Room Limit' will not change - please unbook the room if you have already booked that room!</h6>
 	<div>
 		<table id="table-rooms" class="table table-bordered table-striped">
 			<thead>
@@ -35,6 +35,7 @@
 					<th>Current Room Limit</th>
 					<th>Maximum Room Limit</th>
 					<th>Location</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 		</table>
@@ -44,7 +45,7 @@
 <br>
 <br>
 
-<h1>Rooms That You Have Currently Booked</h1>
+<h6>Rooms That You Have Currently Booked</h6>
 	<div>
 		<table id="table-rooms-booked" class="table table-bordered table-striped">
 			<thead>
@@ -52,7 +53,6 @@
 					<th>Room ID</th> 
 					<th>Room Type</th>
 					<th>Location</th>
-					<th>Actions</th>
 				</tr>
 			</thead>
 		</table>
