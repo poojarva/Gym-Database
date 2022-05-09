@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Rooms</title>
+<title>Courts</title>
 <?php require_once('header.php'); ?>
 <!-- My JS libraries -->
 <!-- Font Awesome library -->

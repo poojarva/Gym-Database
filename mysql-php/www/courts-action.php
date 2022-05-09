@@ -100,7 +100,7 @@ class Courts
         global $conn;
         
         if ($_POST["ID"]) {
-            $sqlQuery = "CALL addMemberToCourt( :username_id, (:court_id);" ;
+            $sqlQuery = "CALL addMemberToCourt( :username_id, :court_id);" ;
                 $stmt = $conn->prepare($sqlQuery);
                 $stmt->bindValue(':court_id', $_POST["ID"]);
                 $stmt->bindValue(':username_id', $_SESSION['username_id']);

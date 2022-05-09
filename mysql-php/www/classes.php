@@ -15,11 +15,21 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
 <script src="classes.js"></script>
+
+<style>
+
+.background {
+background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
 </head>
 
 <?php require_once('connection-member.php'); ?>
 
-<body>
+<body class="background">
 
 <div class="container-fluid mt-3 mb-3">
 	<h4>Classes</h4>

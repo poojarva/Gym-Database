@@ -168,11 +168,14 @@ background-image: url('background.png');
 <div class="container-fluid mt-3 mb-3">
     <ul>
   <button class="button-78"><a href="classes.php">Book a spot in a Class</a></button> 
-  <br> 
+  </br> 
+    </br> 
   <button class="button-78"><a href="rooms.php">Reserve a spot in a Room</a></button> 
-  <br>
+  </br>
+    </br> 
   <button class="button-78"><a href="courts.php">Reserve a spot in a Court</a></button>
-  <br>
+  </br>
+    </br> 
   
     </ul>
 </div>
