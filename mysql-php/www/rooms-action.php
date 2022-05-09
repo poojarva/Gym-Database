@@ -70,13 +70,12 @@ class Rooms
             $stmt->bindValue(':room_id', $_POST["ID"]);
             $stmt->bindValue(':username_id', $_SESSION['username_id']);
             
-            $stmt->execute();
-        
-            echo '<script>alert("You have successfully booked this room!")</script>';
-         
+            $stmt->execute();         
         
         
     }
+    echo "<script>alert('You have successfully booked this room!');</script>";
+    
     }
     
     public function deleteRoom()
