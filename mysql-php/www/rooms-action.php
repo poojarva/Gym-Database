@@ -1,3 +1,7 @@
+<html>
+                    <head>
+                    </head>
+                    <body>
 <?php
 require_once ('connection-member.php');
 
@@ -73,19 +77,10 @@ class Rooms
                 // this means that the user has already booked it
                 if (!empty($queryResult)){
                    
-                    ?>
-                    <html>
-                    <head>
-                    </head>
-                    <body>
-                    <?php
                     echo '<script>';
                     echo 'alert("You have already booked this room! Try booking another room")';
                     echo '</script>';
-                    ?>
-                     </body>
-                      </html>
-                       <?php
+                    
                     
                 }
                 else{
@@ -102,16 +97,8 @@ class Rooms
                     $stmt->bindValue(':username_id', $_SESSION['username_id']);
                     
                     $stmt->execute();
-                    ?>
-                    <html>
-                    <head>
-                    </head>
-                    <body>
-                    <?php
+ 
                     echo '<script> alert("You booked this room!"); </script>';
-                    ?> </body> 
-                    </html> 
-                    <?php
                   
                 }           
         
@@ -158,3 +145,5 @@ if(!empty($_POST['action']) && $_POST['action'] == 'deleteRoom') {
 
 
 ?>
+</body>
+                      </html>
