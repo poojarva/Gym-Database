@@ -72,8 +72,16 @@ class Rooms
                 
                 // this means that the user has already booked it
                 if (!empty($queryResult)){
+                   
+                    ?>
+                    <body>
+                    <?php
+                    
                     echo '<script>alert("You have already booked this room! Try booking another room")</script>';
-                    echo "You have already booked this room! Try booking another room";
+                    ?>
+</body>
+
+<?php
                     
                 }
                 else{
@@ -90,8 +98,16 @@ class Rooms
                     $stmt->bindValue(':username_id', $_SESSION['username_id']);
                     
                     $stmt->execute();
+                    ?>
+                    <body>
+                    <?php
+                   
+                    
                     echo '<script>alert("You booked this room!")</script>';
-                    echo "You booked this room!";
+                    ?>
+</body>
+<?php
+                  
                 }
             // need to do a little check to see if the user has already booked that room
            
