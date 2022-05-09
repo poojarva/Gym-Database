@@ -60,7 +60,7 @@ class Courts
     {
         global $conn;
         
-        $sqlQuery = "SELECT c.court_id as 'ID', c.court_type 'court_type', l.location_id  as 'location_id' FROM courts c JOIN users_courts USING (court_id) JOIN location l USING (location_id)";
+        $sqlQuery = "SELECT c.court_id as 'ID', c.court_type 'court_type', l.location_id  as 'location_id' FROM courts c JOIN users_courts USING (court_id) JOIN location l USING (location_id) WHERE username_id = :username_id";
         
        
         

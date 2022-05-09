@@ -11,8 +11,11 @@
      margin-top: 1px;
      margin-right: 2px;
      position:absolute;
-     top:0;
-     right:0;
+/*      top:0; */
+/*      right:0; */
+       top:50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); 
  }
  
 #body {
@@ -164,9 +167,12 @@ background-image: url('background.png');
 
 <div class="container-fluid mt-3 mb-3">
     <ul>
-  <button class="button-78"><a href="classes.php">Basic information about classes</a></button>  
-  <button class="button-78"><a href="rooms.php">Basic information about rooms</a></button> 
-  <button class="button-78"><a href="courts.php">Basic information about courts</a></button>
+  <button class="button-78"><a href="classes.php">Book a spot in a Class</a></button> 
+  <br> 
+  <button class="button-78"><a href="rooms.php">Reserve a spot in a Room</a></button> 
+  <br>
+  <button class="button-78"><a href="courts.php">Reserve a spot in a Court</a></button>
+  <br>
   
     </ul>
 </div>
