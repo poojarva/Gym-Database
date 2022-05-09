@@ -73,7 +73,7 @@ class Rooms
         }
     }
     
-    public function updateRoom()
+    public function addRoom()
     {
         global $conn;
         
@@ -98,23 +98,22 @@ class Rooms
         }
     }
     
-    public function addRoom()
+    public function updateRoom()
     {
         global $conn;
         
         global $conn;
-        if ($_POST["ID"] && isset($_SESSION['username_id'])) {
+        if ($_POST["ID"]) {
                 
-            $userId = $_SESSION['username_id'];
+            
             $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':room_id', $_POST["ID"]);
-            $stmt->bindValue(':username_id', $userId);
+            $stmt->bindValue(':username_id', $_SESSION['username_id']);
             
-            $stmt->execute();            
+            $stmt->execute();
         
-    }
-    else{
+        
         
     }
     }
