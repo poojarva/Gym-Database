@@ -99,7 +99,7 @@ class Rooms
         global $conn;
         
         if ($_POST["ID"]) {
-            $sqlQuery = "CALL addMemberToRoom(:room_id, :username_id);" ;
+            $sqlQuery = "CALL addMemberToRoom(:username_id, :room_id);" ;
                 $stmt = $conn->prepare($sqlQuery);
                 $stmt->bindValue(':room_id', $_POST["ID"]);
                 $stmt->bindValue(':username_id', $_SESSION['username_id']);
@@ -116,7 +116,7 @@ class Rooms
         global $conn;
         
         if ($_POST["ID"]) {
-            $sqlQuery = "CALL removeMemberFromRoom(:room_id, :username_id);" ;
+            $sqlQuery = "CALL removeMemberFromRoom(:username_id, :room_id);" ;
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':room_id', $_POST["ID"]);
             $stmt->bindValue(':username_id', $_SESSION['username_id']);

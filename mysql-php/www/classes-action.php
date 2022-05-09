@@ -101,7 +101,7 @@ class Classes
         global $conn;
         
         if ($_POST["ID"]) {
-            $sqlQuery = "CALL addMemberToClass(:class_id, :username_id);" ;
+            $sqlQuery = "CALL addMemberToClass(:username_id, :class_id);" ;
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':class_id', $_POST["ID"]);
             $stmt->bindValue(':username_id', $_SESSION['username_id']);
@@ -118,7 +118,7 @@ class Classes
         global $conn;
         
         if ($_POST["ID"]) {
-            $sqlQuery = "CALL removeMemberFromClass(:class_id, :username_id);" ;
+            $sqlQuery = "CALL removeMemberFromClass(:username_id, :class_id);" ;
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':class_id', $_POST["ID"]);
             $stmt->bindValue(':username_id', $_SESSION['username_id']);
