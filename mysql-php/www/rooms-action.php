@@ -55,6 +55,43 @@ class Rooms
         echo json_encode($output);
     }
 
+    public function listRoomsBooked()
+    {
+        global $conn;
+        
+        $sqlQuery = "SELECT r.room_id as 'ID', r.room_type 'room_type',   l.location_id  as 'location_id' FROM rooms r JOIN users_rooms USING (room_id) JOIN location l USING (location_id) WHERE username_id = :username_id";
+        
+       
+        
+        $stmt = $conn->prepare($sqlQuery);
+        $stmt->bindValue(':username_id', $_SESSION['username_id']);
+        $stmt->execute();
+        
+        $numberRows = $stmt->rowCount();
+        
+        
+        $dataTable = array();
+        
+        while ($sqlRow = $stmt->fetch()) {
+            $dataRow = array();
+            
+            $dataRow[] = $sqlRow['ID'];
+            $dataRow[] = $sqlRow['room_type'];
+            $dataRow[] = $sqlRow['location_id'];
+            
+            
+            $dataTable[] = $dataRow;
+        }
+        
+        $output = array(
+            "recordsTotal" => $numberRows,
+            "recordsFiltered" => $numberRows,
+            "data" => $dataTable
+        );
+        
+        echo json_encode($output);
+    }
+    
 
     
     public function updateRoom()
@@ -99,6 +136,9 @@ $room = new Rooms();
 
 if(!empty($_POST['action']) && $_POST['action'] == 'listRooms') {
     $room->listRooms();
+}
+if(!empty($_POST['action']) && $_POST['action'] == 'listRoomsBooked'){
+    $room->listRoomsBooked();
 }
 if(!empty($_POST['action']) && $_POST['action'] == 'updateRoom') {
     $room->updateRoom();

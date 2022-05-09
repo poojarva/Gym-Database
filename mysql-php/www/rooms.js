@@ -20,6 +20,21 @@ $(document).ready(function(){
 		}
 	});	
 	
+	var tableRoomsBooked = $('#table-rooms-booked').DataTable({
+		"dom": 'Blfrtip',
+		"ordering": false,
+		"searching": false,
+		"paging": false,
+		"responsive": true,
+		"ajax":{
+			url:"rooms-action.php",
+			type:"POST",
+			data:{
+					action:'listRoomsBooked'
+				 },
+			dataType:"json"
+		}
+	});
 
 	
 		$("#member-modal").on('submit','#member-form', function(event){
@@ -41,6 +56,7 @@ $(document).ready(function(){
 				$('#member-form')[0].reset();
 				$('#save').attr('disabled', false);
 				tableRooms.ajax.reload();
+				tableRoomsBooked.ajax.reload();
 			}
 		})
 	});		
@@ -55,6 +71,7 @@ var ID = $(this).attr("emp_id");
 				data:{ID:ID, action:action},
 				success:function() {					
 					tableRooms.ajax.reload();
+					tableRoomsBooked.ajax.reload();
 				}
 			})
 		} else {
