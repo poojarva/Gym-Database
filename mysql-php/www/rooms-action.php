@@ -9,15 +9,15 @@ class Rooms
         
         $sqlQuery = "SELECT r.room_id as 'ID', r.room_type 'room_type',  r.limit_capacity as 'limit_capacity', r.max_limit as 'max_limit',  l.location_id  as 'location_id' FROM rooms r JOIN location l USING (location_id)";
         
-//         if (! empty($_POST["search"]["value"])) {
-//             $sqlQuery .= 'WHERE (r.room_type LIKE "%' . $_POST["search"]["value"] . '%") ';
-//         }
+        if (! empty($_POST["search"]["value"])) {
+            $sqlQuery .= 'WHERE (r.room_type LIKE "%' . $_POST["search"]["value"] . '%") ';
+        }
         
-//         if (! empty($_POST["order"])) {
-//             $sqlQuery .= 'ORDER BY ' . ($_POST['order']['0']['column'] + 1) . ' ' . $_POST['order']['0']['dir'] . ' ';
-//         } else {
-//             $sqlQuery .= 'ORDER BY r.room_type DESC ';
-//         }
+        if (! empty($_POST["order"])) {
+            $sqlQuery .= 'ORDER BY ' . ($_POST['order']['0']['column'] + 1) . ' ' . $_POST['order']['0']['dir'] . ' ';
+        } else {
+            $sqlQuery .= 'ORDER BY r.room_type DESC ';
+        }
         
         $stmt = $conn->prepare($sqlQuery);
         $stmt->execute();
@@ -102,19 +102,20 @@ class Rooms
     {
         global $conn;
         
-        $sqlQuery = "CALL insertRooms(:room_type, :limit_capacity, :max_limit, :location_id);";
+        global $conn;
+        if ($_POST["ID"]) {
+                
+            
+            $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
+            $stmt = $conn->prepare($sqlQuery);
+            $stmt->bindValue(':room_id', $_POST["ID"]);
+            $stmt->bindValue(':username_id', $_SESSION['username_id']);
+            
+            $stmt->execute();
         
         
-        $stmt = $conn->prepare($sqlQuery);
-        $stmt->bindValue(':room_type', $_POST["room_type"]);
-        $stmt->bindValue(':limit_capacity', $_POST["limit_capacity"]);
-        $stmt->bindValue(':max_limit', $_POST["max_limit"]);
-        $stmt->bindValue(':location_id', $_POST["location_id"]);
         
-        $stmt->execute();
-        
-        
-        
+    }
     }
     
     public function deleteRoom()

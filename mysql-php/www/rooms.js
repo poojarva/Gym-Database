@@ -53,31 +53,25 @@ $(document).ready(function(){
 	});		
 	
 	$("#table-rooms").on('click', '.update', function(){
-	 var ID = $(this).attr("emp_id");
-		var action = 'getRoom';
-		$.ajax({
-			url:'rooms-action.php',
-			method:"POST",
-			data:{ID:ID, action:action},
-			dataType:"json",
-			success:function(data){
-				$('#member-modal').modal('show');
-				$('#ID').val(ID);
-				$('#room_type').val(data.room_type);
-				$('#limit_capacity').val(data.limit_capacity);
-				$('#max_limit').val(data.max_limit);
-				$('#location_id').val(data.location_id);
-				$('.modal-title').html("Edit Room");
-				$('#action').val('updateRoom');
-				$('#save').val('Save');
-			}
-		})
+var ID = $(this).attr("emp_id");		
+		var action = "updateRoom";
+		if(confirm("Are you sure you want to book this room?")) {
+			$.ajax({
+				url:'rooms-action.php',
+				method:"POST",
+				data:{ID:ID, action:action},
+				success:function() {					
+					tableRooms.ajax.reload();
+				}
+			})
+		} else {
+			return false;
+		}
 	});
-	
 	$("#table-rooms").on('click', '.delete', function(){
 		var ID = $(this).attr("emp_id");		
 		var action = "deleteRoom";
-		if(confirm("Are you sure you want to delete this room?")) {
+		if(confirm("Are you sure you want to unbook this room?")) {
 			$.ajax({
 				url:'rooms-action.php',
 				method:"POST",
