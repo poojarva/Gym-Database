@@ -65,6 +65,8 @@
 					<label>Location ID</label>
 						<select class="form-control" id="location_id">
             			    <?php
+            			    global $conn;
+            			    
             			        $sqlQuery = "SELECT location_id, location_name FROM location ORDER BY location_name ASC";
             			        $stmt = $conn->prepare($sqlQuery);
             			        $stmt->execute();

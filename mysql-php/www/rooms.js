@@ -20,6 +20,30 @@ $(document).ready(function(){
 		}
 	});	
 	
+	
+		$("#member-modal").on('submit','#member-form', function(event){
+		event.preventDefault();
+		$('#save').attr('disabled','disabled');
+		$.ajax({
+			url:"rooms-employee-action.php",
+			method:"POST",
+			data:{
+				ID: $('#ID').val(),
+				room_type: $('#room_type').val(),
+				limit_capacity: $('#limit_capacity').val(),
+				max_limit: $('#max_limit').val(),
+				location_id: $('#location_id').val(),
+				action: $('#action').val(),
+			},
+			success:function(){
+				$('#member-modal').modal('hide');
+				$('#member-form')[0].reset();
+				$('#save').attr('disabled', false);
+				tableRooms.ajax.reload();
+			}
+		})
+	});		
+	
 
 // book room
 	
