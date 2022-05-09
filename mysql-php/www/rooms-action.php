@@ -61,9 +61,9 @@ class Rooms
         if ($_POST["ID"]) {
             // need to first add the user and this room
             
-          
+          $sqlQuery = "UPDATE rooms SET limit_capacity = limit_capacity-1 WHERE room_id = :room_id";
             
-            $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
+//             $sqlQuery = "INSERT INTO users_rooms (username_id, room_id) VALUES (:username_id, :room_id);";
             $stmt = $conn->prepare($sqlQuery);
             $stmt->bindValue(':room_id', $_POST["ID"]);
             $stmt->bindValue(':username_id', $_SESSION["username_id"]);
