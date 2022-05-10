@@ -24,23 +24,23 @@ background-image: url('background.png');
 			<div class="row justify-content-center">
 				<div class="col-4">
 				<div class="form-group">
-						<label>First Name:</label>
+						<mark> <label>First Name:</label> </mark>
 						<input type="text" class="form-control" id="first_name" placeholder="Enter First Name" name="first_name" required>
 					</div>
 					<div class="form-group">
-						<label>Last Name:</label>
+						<mark><label>Last Name:</label></mark>
 						<input type="text" class="form-control" id="last_name" placeholder="Enter Last Name" name="last_name" required>
 					</div>
 					<div class="form-group">
-						<label>Email:</label>
+						<mark><label>Email:</label></mark>
 						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
 					</div>
 					<div class="form-group">
-						<label>Password:</label>
+						<mark><label>Password:</label></mark>
 						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
 					</div>
 					<div class="form-group">
-						<label>Location ID:</label>
+						<mark><label>Location ID:</label></mark>
 						<select class="form-control" id="location_id" name="location_id" required>
             			    <?php
             			    global $conn;
@@ -57,9 +57,14 @@ background-image: url('background.png');
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</div>
 				<center><p  style="color: white">
-				Already have an account? 
-				<a href="login-member.php">Login here</a>
+				<mark>Already have an account? </mark>
+				<a href="login-member.php"><mark> Login here</mark></a>
 				</p>
+							</br>
+				</br>
+				        <div class="copyright text-center text-white">
+            Copyright © 2022
+        </div>
 				</center>
 			</div>
 		</form>

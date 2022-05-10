@@ -86,8 +86,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Choose <em>Program</em></h2>
-                        <p>Mega Gym is a template for gyms and fitness centers. You can use this layout for your
-                            business website.</p>
+                       
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -98,8 +97,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Basic Fitness</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi quos autem
-                                    illum illo quam.</p>
+                                <p>Fuel all of your fitness goals here!</p>
                                 <a href="#" class="text-button">More</a>
                             </div>
                         </li>
@@ -109,8 +107,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>New Gym Training</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi quos autem
-                                    illum illo quam.</p>
+                                <p>There is always a new training session here in one of our classes!</p>
                                 <a href="#" class="text-button">More</a>
                             </div>
                         </li>
@@ -120,8 +117,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Basic Muscle Course</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi quos autem
-                                    illum illo quam.</p>
+                                <p>Join with a friend and choose any class, court, or room to use!</p>
                                 <a href="#" class="text-button">More</a>
                             </div>
                         </li>
@@ -135,8 +131,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Advanced Muscle Course</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi quos autem
-                                    illum illo quam.</p>
+                                <p>Book a whole room with your friends!</p>
                                 <a href="#" class="text-button">More</a>
                             </div>
                         </li>
@@ -146,8 +141,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Yoga Training</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi quos autem
-                                    illum illo quam.</p>
+                                <p>Join today and book a yoga class!</p>
                                 <a href="#" class="text-button">More</a>
                             </div>
                         </li>
@@ -157,8 +151,7 @@
                             </div>
                             <div class="right-content">
                                 <h4>Body Building Course</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi quos autem
-                                    illum illo quam.</p>
+                                <p>Try a Body Composition class here!</p>
                                 <a href="#" class="text-button">More</a>
                             </div>
                         </li>
@@ -174,9 +167,7 @@
                 <div class="col-lg-10 offset-lg-1">
                     <div class="cta-content">
                         <h2>Don’t <em>think</em>, begin <em>today</em>!</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex in consequatur voluptatem
-                            distinctio atque, incidunt eum omnis, perspiciatis odit excepturi error itaque alias? Magnam
-                            soluta quos nobis odio qui.</p>
+                        
                         <div class="main-button scroll-to-section">
                             <a href="#our-classes">Become a member</a>
                         </div>
@@ -192,8 +183,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Our <em>Sports Halls</em></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur culpa labore vel dolorem
-                            ad perferendis illum nesciunt fugiat modi numquam.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -222,11 +212,7 @@
                         <article id='tabs-1'>
                             <img src="assets/images/halls/halls-1.jpg" alt="First hall">
                             <h4>Basic Fitness</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex animi corrupti eaque
-                                facilis? Sunt maxime dolorum fuga, officiis sit inventore doloribus soluta quos,
-                                repellat quis ratione animi aut earum ad nemo error odit mollitia? Non repellat
-                                voluptatem porro consequatur totam distinctio, facilis unde aliquam dignissimos suscipit
-                                ex id quis a.</p>
+                           
                             <div class="main-button">
                                 <a href="#schedule">View Schedule</a>
                             </div>
@@ -234,11 +220,7 @@
                         <article id='tabs-2'>
                             <img src="assets/images/halls/halls-2.jpg" alt="Second hall">
                             <h4>Advanced Muscle Course</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex animi corrupti eaque
-                                facilis? Sunt maxime dolorum fuga, officiis sit inventore doloribus soluta quos,
-                                repellat quis ratione animi aut earum ad nemo error odit mollitia? Non repellat
-                                voluptatem porro consequatur totam distinctio, facilis unde aliquam dignissimos suscipit
-                                ex id quis a.</p>
+                            
                             <div class="main-button">
                                 <a href="#schedule">View Schedule</a>
                             </div>
@@ -246,11 +228,7 @@
                         <article id='tabs-3'>
                             <img src="assets/images/halls/halls-3.jpg" alt="Third hall">
                             <h4>Yoga Training</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex animi corrupti eaque
-                                facilis? Sunt maxime dolorum fuga, officiis sit inventore doloribus soluta quos,
-                                repellat quis ratione animi aut earum ad nemo error odit mollitia? Non repellat
-                                voluptatem porro consequatur totam distinctio, facilis unde aliquam dignissimos suscipit
-                                ex id quis a.</p>
+                           
                             <div class="main-button">
                                 <a href="#schedule">View Schedule</a>
                             </div>
@@ -258,11 +236,7 @@
                         <article id='tabs-4'>
                             <img src="assets/images/halls/halls-4.jpg" alt="Fourth hall">
                             <h4>Body Building Course</h4>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex animi corrupti eaque
-                                facilis? Sunt maxime dolorum fuga, officiis sit inventore doloribus soluta quos,
-                                repellat quis ratione animi aut earum ad nemo error odit mollitia? Non repellat
-                                voluptatem porro consequatur totam distinctio, facilis unde aliquam dignissimos suscipit
-                                ex id quis a.</p>
+                            
                             <div class="main-button">
                                 <a href="#schedule">View Schedule</a>
                             </div>
@@ -279,9 +253,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading dark-bg">
                         <h2>Classes <em>Schedule</em></h2>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt deleniti est fugit itaque
-                            repellendus. Animi molestias quod in officiis molestiae aperiam, nihil est maxime similique
-                            voluptatem culpa inventore fugit deserunt.</p>
+                        
                     </div>
                 </div>
             </div>
@@ -346,9 +318,7 @@
                 <div class="col-lg-6 offset-lg-3">
                     <div class="section-heading">
                         <h2>Our <em>Trainers</em></h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum iure quasi consequatur
-                            doloremque natus iusto labore laborum laboriosam odit veritatis alias fugit possimus
-                            voluptatem maxime, suscipit tempora? Tempore, hic. Molestiae!</p>
+                       
                     </div>
                 </div>
             </div>
@@ -361,8 +331,7 @@
                         <div class="down-content">
                             <span>Strength Trainer</span>
                             <h4>Bret D. Bowers</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatibus, deleniti
-                                quidem ipsa sunt qui. Ex quasi ut error non.</p>
+                            
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -380,8 +349,7 @@
                         <div class="down-content">
                             <span>Muscle Trainer</span>
                             <h4>Hector T. Daigl</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatibus, deleniti
-                                quidem ipsa sunt qui. Ex quasi ut error non.</p>
+                        
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -399,8 +367,7 @@
                         <div class="down-content">
                             <span>Power Trainer</span>
                             <h4>Paul D. Newman</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatibus, deleniti
-                                quidem ipsa sunt qui. Ex quasi ut error non.</p>
+                          
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -418,18 +385,13 @@
         <div class="col-lg-6 offset-lg-3">
             <div class="section-heading">
                 <h2><em>Testimonials</em></h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum iure quasi consequatur
-                    doloremque natus iusto labore laborum laboriosam odit veritatis alias fugit possimus
-                    voluptatem maxime, suscipit tempora? Tempore, hic. Molestiae!</p>
+                <p>Great gym!</p>
             </div>
         </div>
         <div class="karusetulava">
             <div>
                 <figure class="testimonial">
-                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident eligendi ex.
-                        Quae velit vitae quos iure laborum accusantium error, labore incidunt asperiores quaerat sit
-                        libero vel porro nulla, aliquid obcaecati quo optio qui illo pariatur fugit molestias nisi
-                        nobis. Totam eius voluptatum beatae sed, quibusdam libero eos magnam impedit.
+                    <blockquote>Awesome classes!
                     </blockquote>
                     <img src="assets/images/testimonials/testimonial-avatar-1.jpg" alt="testimonial">
                     <div class="peopl">
@@ -440,10 +402,7 @@
             </div>
             <div>
                 <figure class="testimonial">
-                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident eligendi ex.
-                        Quae velit vitae quos iure laborum accusantium error, labore incidunt asperiores quaerat sit
-                        libero vel porro nulla, aliquid obcaecati quo optio qui illo pariatur fugit molestias nisi
-                        nobis. Totam eius voluptatum beatae sed, quibusdam libero eos magnam impedit.
+                    <blockquote>Variety of rooms and courts to choose from!
                     </blockquote>
                     <img src="assets/images/testimonials/testimonial-avatar-2.jpg" alt="testimonial">
                     <div class="peopl">
@@ -454,10 +413,7 @@
             </div>
             <div>
                 <figure class="testimonial">
-                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident eligendi ex.
-                        Quae velit vitae quos iure laborum accusantium error, labore incidunt asperiores quaerat sit
-                        libero vel porro nulla, aliquid obcaecati quo optio qui illo pariatur fugit molestias nisi
-                        nobis. Totam eius voluptatum beatae sed, quibusdam libero eos magnam impedit.
+                    <blockquote>Great employees!
                     </blockquote>
                     <img src="assets/images/testimonials/testimonial-avatar-3.jpg" alt="testimonial">
                     <div class="peopl">
@@ -468,10 +424,7 @@
             </div>
             <div>
                 <figure class="testimonial">
-                    <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos provident eligendi ex.
-                        Quae velit vitae quos iure laborum accusantium error, labore incidunt asperiores quaerat sit
-                        libero vel porro nulla, aliquid obcaecati quo optio qui illo pariatur fugit molestias nisi
-                        nobis. Totam eius voluptatum beatae sed, quibusdam libero eos magnam impedit.
+                    <blockquote>Awesome :)
                     </blockquote>
                     <img src="assets/images/testimonials/testimonial-avatar-4.jpg" alt="testimonial">
                     <div class="peopl">
@@ -487,10 +440,7 @@
         <div class="col-lg-12">
             <div class="section-heading">
                 <h2>Price</h2>
-                <p class="text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum iure quasi
-                    consequatur
-                    doloremque natus iusto labore laborum laboriosam odit veritatis alias fugit possimus
-                    voluptatem maxime, suscipit tempora? Tempore, hic. Molestiae!</p>
+              
             </div>
         </div>
         <div class="pricing__item col-lg-3 col-md-6 col-sm-12">
@@ -498,7 +448,7 @@
             <div class="pricing__price"><span class="pricing__currency">$</span>199<span
                     class="pricing__period">/month</span></div>
             <ul class="pricing__feature-list">
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
+              
             </ul>
             <a href="#" class="pricing__action">Choose plan</a>
         </div>
@@ -507,8 +457,7 @@
             <div class="pricing__price"><span class="pricing__currency">$</span>350<span
                     class="pricing__period">/month</span></div>
             <ul class="pricing__feature-list">
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
+               
             </ul>
             <a href="#" class="pricing__action">Choose plan</a>
         </div>
@@ -517,9 +466,7 @@
             <div class="pricing__price"><span class="pricing__currency">$</span>450<span
                     class="pricing__period">/month</span></div>
             <ul class="pricing__feature-list">
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
+            
             </ul>
             <a href="#" class="pricing__action">Choose plan</a>
         </div>
@@ -529,10 +476,7 @@
                     class="pricing__period">/month</span>
             </div>
             <ul class="pricing__feature-list">
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
-                <li class="pricing__feature">Lorem, ipsum dolor.</li>
+               
             </ul>
             <a href="#" class="pricing__action">Choose plan</a>
         </div>
@@ -574,9 +518,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <h3 class="footer-logo">Gym</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti natus, reiciendis, inventore
-                        placeat sapiente dolor incidunt et quo voluptates, officiis eaque. Reprehenderit, officia
-                        laborum. Quae modi praesentium dolorem quibusdam nobis!</p>
+       
                     <ul class="list-unstyled socila-list">
                         <li><a href="#"><img src="assets/images/social/facebook.png" alt="facebook"></a></li>
                         <li><a href="#"><img src="assets/images/social/twitter.png" alt="twitter"></a></li>
@@ -593,7 +535,6 @@
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">Basic Fitness</h4>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
                         </div>
                     </div>
                     <div class="media">
@@ -602,7 +543,6 @@
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">Yoga Training</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
                     <div class="media">
@@ -611,7 +551,6 @@
                         </a>
                         <div class="media-body">
                             <h4 class="media-heading">Body Building</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
                 </div>
@@ -625,7 +564,7 @@
             </div>
         </div>
         <div class="copyright text-center text-white">
-            Copyright © 2021
+            Copyright © 2022
         </div>
     </footer>
 

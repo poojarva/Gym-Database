@@ -24,23 +24,36 @@ background-image: url('background.png');
 			<div class="row justify-content-center">
 				<div class="col-4">
 					<div class="form-group">
-						<label>Email:</label>
-						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+						<mark><label>Email:</label></mark>
+						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required >
 					</div>
 					<div class="form-group">
-						<label>Password:</label>
-						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+						<mark><label>Password:</label></mark>
+						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required >
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					</br>
 				</br>
-					<center><p  style="color: white">
-				Use the following credentials:
-				email:  testemployee@gmail.com
-				password: testemployee
-				
+					</center>
+				</br>
+				</br>
+				<center><p  style="color: white">
+				<mark> 
+				Use the following credentials: 
+				</mark>
 				</p>
+				<p>
+				<mark> email:  testemployee@gmail.com </mark>
+				</br>
+				<mark> password: testemployee </mark>
+				</p>
+							</br>
+				</br>
+				        <div class="copyright text-center text-white">
+            Copyright © 2022
+        </div>
 				</center>
+		
 				</div>
 			</div>
 		</form>

@@ -34,15 +34,16 @@ background-image: url('background.png');
 			<div class="row justify-content-center">
 				<div class="col-4">
 					<div class="form-group">
-						<label>Email:</label>
-						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+						<mark><label>Email:</label></mark>
+						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" >
 					</div>
 					<div class="form-group">
-						<label>Password:</label>
-						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
+						<mark><label>Password:</label></mark>
+						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" >
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					</br>
+									</br>
 				
 					<center><p  style="color: white">
 				<mark>Don't have an account? </mark>
@@ -53,11 +54,18 @@ background-image: url('background.png');
 				</br>
 				<center><p  style="color: white">
 				<mark> 
-				Use the following credentials:
-				email:  testmember@gmail.com
-				password: testmember
+				Use the following credentials: 
 				</mark>
 				</p>
+				<p>
+				<mark> email:  testmember@gmail.com </mark>
+				</br>
+				<mark> password: testmember </mark>
+				</p>
+				</center>
+				        <div class="copyright text-center text-white">
+            Copyright © 2022
+        </div>
 				</div>
 			</div>
 		</form>
