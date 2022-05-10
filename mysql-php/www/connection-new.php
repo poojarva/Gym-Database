@@ -17,7 +17,7 @@ try {
 
 
 // Start or resume session variables
-// session_start();
+session_start();
 
     // If the page is receiving the email and password from the login form then verify the login data
 if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['location_id']))
@@ -38,7 +38,7 @@ if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['e
     else
     {
         // Show login page
-        require('login-member.php');
+        require('sign-up.php');
         exit();
    }
 
