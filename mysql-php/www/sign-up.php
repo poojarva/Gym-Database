@@ -23,34 +23,24 @@ background-image: url('background.png');
 		<form method="post">
 			<div class="row justify-content-center">
 				<div class="col-4">
-				</br>
-				</br>
 				<div class="form-group">
-						<mark> <label>First Name:</label> </mark>
+						<label style="color: white">First Name:</label>
 						<input type="text" class="form-control" id="first_name" placeholder="Enter First Name" name="first_name" required>
 					</div>
-					</br>
-				</br>
 					<div class="form-group">
-						<mark><label>Last Name:</label></mark>
+						<label style="color: white">Last Name:</label>
 						<input type="text" class="form-control" id="last_name" placeholder="Enter Last Name" name="last_name" required>
 					</div>
-					</br>
-				</br>
 					<div class="form-group">
-						<mark><label>Email:</label></mark>
+						<label style="color: white">Email:</label>
 						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
 					</div>
-					</br>
-				</br>
 					<div class="form-group">
-						<mark><label>Password:</label></mark>
+						<label style="color: white">Password:</label>
 						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
 					</div>
-					</br>
-				</br>
 					<div class="form-group">
-						<mark><label>Location ID:</label></mark>
+						<label style="color: white">Location ID:</label>
 						<select class="form-control" id="location_id" name="location_id" required>
             			    <?php
             			    global $conn;
@@ -66,17 +56,10 @@ background-image: url('background.png');
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</div>
-				</br>
-				</br>
 				<center><p  style="color: white">
 				<mark>Already have an account? </mark>
 				<a href="login-member.php"><mark> Login here</mark></a>
 				</p>
-							</br>
-				</br>
-				        <div class="copyright text-center text-white">
-            Copyright © 2022
-        </div>
 				</center>
 			</div>
 		</form>

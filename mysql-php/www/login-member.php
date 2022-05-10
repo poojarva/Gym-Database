@@ -17,11 +17,6 @@ background-image: url('background.png');
   color: black;
 }
 
-#button {
-    background-color: blue;
-   
-}
-
 </style>
 </head>
 
@@ -33,46 +28,32 @@ background-image: url('background.png');
 		<form method="post">
 			<div class="row justify-content-center">
 				<div class="col-4">
-				</br>
-				</br>
 					<div class="form-group">
-						<mark><label>Email:</label></mark>
-						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" >
+						<label style="color: white">Email:</label>
+						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
 					</div>
-					</br>
-				</br>
 					<div class="form-group">
-						<mark><label>Password:</label></mark>
-						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" >
+						<label style="color: white">Password:</label>
+						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
 					</div>
-					</br>
-				</br>
 					<button type="submit" class="btn btn-primary">Submit</button>
-					</br>
-									</br>
 				
 					<center><p  style="color: white">
 				<mark>Don't have an account? </mark>
-				 <a href="sign-up.php">Become a member</a>
+				<a href="sign-up.php"><mark>Sign up here</mark></a>
 				</p>
 				</center>
 				</br>
 				</br>
 				<center><p  style="color: white">
 				<mark> 
-				Use the following credentials: 
+				Use the following credentials:
+				</br>
+				email:  testmember@gmail.com
+				</br>
+				password: testmember
 				</mark>
 				</p>
-				<p>
-				<mark> email:  testmember@gmail.com </mark>
-				</br>
-				<mark> password: testmember </mark>
-				</p>
-				</br>
-				</br>
-				        <div class="copyright text-center text-white">
-            Copyright © 2022
-        </div>
 				</center>
 				
 				</div>
