@@ -33,12 +33,5 @@ if (isset($_POST['first_name']))
         
             header("location: https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/index.php");
     }
-    else
-    {
-        // Show login page
-        
-        header("location: https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/sign-up.php");
-        
-   }
     
 ?>
