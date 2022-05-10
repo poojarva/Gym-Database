@@ -15,16 +15,26 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
 <script src="member.js"></script>
+<style>
 
+.background {
+background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+</style>
 <!-- CSS for datatables buttons -->
 </head>
 
 <?php require_once('connection.php'); ?>
 
-<body>
+<body class="background">
 
 <div class="container-fluid mt-3 mb-3">
-	<h4>Members</h4>
+	<h4 style="color: white; font-size:16px">Members</h4>
 	
 	<div class="pb-3">
 		<button type="button" id="addMember" class="btn btn-primary btn-sm">Add Member</button>
@@ -34,13 +44,13 @@
 		<table id="table-members" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Location ID</th>
-					<th>Location Name</th>
-					<th>Email</th>
-					<th>Actions</th>
+					<th style="color: white">ID</th>
+					<th style="color: white">First Name</th>
+					<th style="color: white">Last Name</th>
+					<th style="color: white">Location ID</th>
+					<th style="color: white">Location Name</th>
+					<th style="color: white">Email</th>
+					<th style="color: white">Actions</th>
 				</tr>
 			</thead>
 		</table>

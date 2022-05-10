@@ -15,28 +15,42 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
 <script src="courts.js"></script>
+
+
+<style>
+
+.background {
+background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+</style>
+
 </head>
 
 <?php require_once('connection-member.php'); ?>
 
-<body>
 
+<body class="background">
 <div class="container-fluid mt-3 mb-3">
-	<h4>Courts</h4>
+	<h4 style="color: white; font-size:16px">Courts</h4>
 	
-	<h6>Reminder: Check the table below to see if you have already booked a spot in that court! 
+	<h6 style="color: white; font-size:12px">Reminder: Check the table below to see if you have already booked a spot in that court! 
 	If you have already booked the court, the 'Current Court Limit' will not change - please unbook the court if you have already booked that court!</h6>
 	
 	<div>
 		<table id="table-courts" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Court ID</th> 
-					<th>Court Type</th>
-					<th>Current Court Limit</th>
-					<th>Maximum Court Limit</th>
-					<th>Location</th>
-					<th>Actions</th>
+					<th style="color: white">Court ID</th> 
+					<th style="color: white">Court Type</th>
+					<th style="color: white">Current Court Limit</th>
+					<th style="color: white">Maximum Court Limit</th>
+					<th style="color: white">Location</th>
+					<th style="color: white">Actions</th>
 				</tr>
 			</thead>
 		</table>
@@ -47,14 +61,14 @@
 <br>
 <br>
 
-<h6>Courts That You Have Currently Booked</h6>
+<h6 style="color: white; font-size:12px" >Courts That You Have Currently Booked</h6>
 	<div>
 		<table id="table-courts-booked" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Court ID</th> 
-					<th>Court Type</th>
-					<th>Location</th>
+					<th style="color: white">Court ID</th> 
+					<th style="color: white">Court Type</th>
+					<th style="color: white">Location</th>
 				</tr>
 			</thead>
 		</table>

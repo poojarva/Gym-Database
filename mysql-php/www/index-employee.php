@@ -167,16 +167,16 @@ background-image: url('background.png');
 
 <div class="container-fluid mt-3 mb-3">
     <ul>
-     <button class="button-78"><a href="classes-employee.php">Change the Classes</a></button> 
+    <center> <button class="button-78"><a href="classes-employee.php">Change the Classes</a></button> </center>
   </br> 
     </br> 
-     <button class="button-78"><a href="rooms-employee.php">Change the Rooms</a></button> 
+    <center> <button class="button-78"><a href="rooms-employee.php">Change the Rooms</a></button> </center>
   </br> 
     </br> 
-     <button class="button-78"><a href="courts-employee.php">Change the Courts</a></button> 
+    <center> <button class="button-78"><a href="courts-employee.php">Change the Courts</a></button> </center>
   </br> 
     </br> 
-     <button class="button-78"><a href="member.php">Change the Members</a></button> 
+    <center> <button class="button-78"><a href="member.php">Change the Members</a></button> </center>
   </br> 
     </br> 
     </ul>

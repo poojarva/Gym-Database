@@ -14,14 +14,27 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 <script src="classes-employee.js"></script>
+
+
+<style>
+
+.background {
+background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+</style>
 </head>
 
 <?php require_once('connection-employee.php'); ?>
 
-<body>
 
+<body class="background">
 <div class="container-fluid mt-3 mb-3">
-	<h4>Classes</h4>
+		<h4 style="color: white; font-size:16px">Classes</h4>
 	
 	<div class="pb-3">
 		<button type="button" id="addClass" class="btn btn-primary btn-sm">Add Class</button>
@@ -31,14 +44,14 @@
 		<table id="table-classes" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Class ID</th> 
-					<th>Class Name</th>
-					<th>Current Class Limit</th>
-					<th>Maximum Class Limit</th>
-					<th>Class Length</th>
-					<th>Instructor First Name</th>
-					<th>Instructor Last Name</th>
-					<th>Actions</th>
+					<th style="color: white">Class ID</th> 
+					<th style="color: white">Class Name</th>
+					<th style="color: white">Current Class Limit</th>
+					<th style="color: white">Maximum Class Limit</th>
+					<th style="color: white">Class Length</th>
+					<th style="color: white">Instructor First Name</th>
+					<th style="color: white">Instructor Last Name</th>
+					<th style="color: white">Actions</th>
 				</tr>
 			</thead>
 		</table>

@@ -162,18 +162,19 @@ background-image: url('background.png');
 <?php require_once('connection-member.php'); ?>
 
 <body class="background">
-
+  </br> 
+    </br> 
 <button><a href="logout.php">Log Out</a></button>
 
 <div class="container-fluid mt-3 mb-3">
     <ul>
-  <button class="button-78"><a href="classes.php">Book a spot in a Class</a></button> 
+ <center> <button class="button-78"><a href="classes.php">Book a spot in a Class</a></button> </center>
   </br> 
     </br> 
-  <button class="button-78"><a href="rooms.php">Reserve a spot in a Room</a></button> 
+  <center> <button class="button-78"><a href="rooms.php">Reserve a spot in a Room</a></button> </center>
   </br>
     </br> 
-  <button class="button-78"><a href="courts.php">Reserve a spot in a Court</a></button>
+ <center> <button class="button-78"><a href="courts.php">Reserve a spot in a Court</a></button> </center>
   </br>
     </br> 
   

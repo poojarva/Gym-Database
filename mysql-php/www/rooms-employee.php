@@ -15,14 +15,25 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
 <script src="rooms-employee.js"></script>
+<style>
+
+.background {
+background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+</style>
 </head>
 
 <?php require_once('connection-employee.php'); ?>
 
-<body>
+<body class="background">
 
 <div class="container-fluid mt-3 mb-3">
-	<h4>Rooms</h4>
+	<h4 style="color: white; font-size:16px">Rooms</h4>
 	
 	<div class="pb-3">
 		<button type="button" id="addRoom" class="btn btn-primary btn-sm">Add Room</button>
@@ -32,12 +43,12 @@
 		<table id="table-rooms" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Room ID</th> 
-					<th>Room Type</th>
-					<th>Current Room Limit</th>
-					<th>Maximum Room Limit</th>
-					<th>Location</th>
-					<th>Actions</th>
+					<th style="color: white">Room ID</th> 
+					<th style="color: white">Room Type</th>
+					<th style="color: white">Current Room Limit</th>
+					<th style="color: white">Maximum Room Limit</th>
+					<th style="color: white">Location</th>
+					<th style="color: white">Actions</th>
 				</tr>
 			</thead>
 		</table>

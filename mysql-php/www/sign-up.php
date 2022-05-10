@@ -2,11 +2,22 @@
 <head>
 <title>Gym Database</title>
 <?php require_once('header.php'); ?>
+<style>
+
+.background {
+background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+</style>
 </head>
 
 <?php require_once('connection-new.php'); ?>
 
-<body>
+<body class="background">
 
 	<div class="container mt-3 mb-3">
 		<form method="post">
@@ -45,10 +56,11 @@
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</div>
-				<p>
+				<center><p  style="color: white">
 				Already have an account? 
-				<a href="login-member.php">Login here</a>.
+				<a href="login-member.php">Login here</a>
 				</p>
+				</center>
 			</div>
 		</form>
 	</div>

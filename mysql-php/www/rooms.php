@@ -15,27 +15,39 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
 
 <script src="rooms.js"></script>
+
+<style>
+
+.background {
+background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+</style>
 </head>
 
 <?php require_once('connection-member.php'); ?>
 
-<body>
+<body class="background">
 
 <div class="container-fluid mt-3 mb-3">
-	<h4>Rooms</h4>
+	<h4 style="color: white; font-size:16px">Rooms</h4>
 	
-	<h6>Reminder: Check the table below to see if you have already booked a spot in that room! 
+	<h6 style="color: white; font-size:12px">Reminder: Check the table below to see if you have already booked a spot in that room! 
 	If you have already booked the room, the 'Current Room Limit' will not change - please unbook the room if you have already booked that room!</h6>
 	<div>
 		<table id="table-rooms" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Room ID</th> 
-					<th>Room Type</th>
-					<th>Current Room Limit</th>
-					<th>Maximum Room Limit</th>
-					<th>Location</th>
-					<th>Actions</th>
+					<th style="color: white">Room ID</th> 
+					<th style="color: white">Room Type</th>
+					<th style="color: white">Current Room Limit</th>
+					<th style="color: white">Maximum Room Limit</th>
+					<th style="color: white">Location</th>
+					<th style="color: white">Actions</th>
 				</tr>
 			</thead>
 		</table>
@@ -45,14 +57,14 @@
 <br>
 <br>
 
-<h6>Rooms That You Have Currently Booked</h6>
+<h6 style="color: white; font-size:12px" >Rooms That You Have Currently Booked</h6>
 	<div>
 		<table id="table-rooms-booked" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Room ID</th> 
-					<th>Room Type</th>
-					<th>Location</th>
+					<th style="color: white">Room ID</th> 
+					<th style="color: white">Room Type</th>
+					<th style="color: white">Location</th>
 				</tr>
 			</thead>
 		</table>

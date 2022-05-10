@@ -25,9 +25,7 @@ background-image: url('background.png');
   background-size: cover;
 }
 
-.text {
 
-}
 </style>
 </head>
 
