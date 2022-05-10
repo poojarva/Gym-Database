@@ -26,11 +26,11 @@ if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['e
         $stmt->bindValue(':first_name', $_POST['first_name']);
         $stmt->bindValue(':last_name', $_POST['last_name']);
         $stmt->bindValue(':email', $_POST['email']);
-        $stmt->bindValue(':type', 'Member');
+        $stmt->bindValue(':type', "Member");
         $stmt->bindValue(':password', password_hash($_POST["password"], PASSWORD_DEFAULT));
         $stmt->bindValue(':location_id', $_POST['location_id']);
         
-        $stmt->execute();
+        if( $stmt->execute()){
         
         echo "You have successfully become a member of our gym! Continue back to the home page and sign in!";
             header("location: https://https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/index.php");
@@ -38,8 +38,10 @@ if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['e
     else
     {
         // Show login page
-        require('sign-up.php');
-        exit();
+        echo "There was an error please try again!";
+        
+        header("location: https://https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/sign-up.php");
+        
    }
-
+    }
 ?>
