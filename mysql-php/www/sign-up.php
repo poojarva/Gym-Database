@@ -30,7 +30,7 @@
 					</div>
 					<div class="form-group">
 						<label>Location ID:</label>
-						<select class="form-control" id="location_id" required>
+						<select class="form-control" id="location_id" name="location_id" required>
             			    <?php
             			    global $conn;
             			    
