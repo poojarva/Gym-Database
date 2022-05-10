@@ -12,6 +12,15 @@ background-image: url('background.png');
   background-size: cover;
 }
 
+#mark {
+  background-color: blue;
+  color: black;
+}
+
+#button {
+    background-color: blue;
+   
+}
 
 </style>
 </head>
@@ -36,16 +45,18 @@ background-image: url('background.png');
 					</br>
 				
 					<center><p  style="color: white">
-				Don't have an account? 
-				<a href="sign-up.php">Sign up here</a>
+				<mark>Don't have an account? </mark>
+				<button href="sign-up.php">Sign up here</button>
 				</p>
 				</center>
 				</br>
 				</br>
 				<center><p  style="color: white">
+				<mark> 
 				Use the following credentials:
 				email:  testmember@gmail.com
 				password: testmember
+				</mark>
 				</p>
 				</div>
 			</div>
