@@ -20,28 +20,25 @@ try {
 session_start();
 
     // If the page is receiving the email and password from the login form then verify the login data
-if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['location_id']))
+if (isset($_POST['first_name']))
     {
-        $stmt = $conn->prepare("INSERT INTO users (first_name, last_name, email, password, type, location_id) VALUES (:first_name, :last_name, :email, :password, :type, :location_id)");
+        $stmt = $conn->prepare("INSERT INTO users (first_name, last_name, email, password, type, location_id) VALUES (:first_name, :last_name, :email, :password, 'Member', :location_id)");
         $stmt->bindValue(':first_name', $_POST['first_name']);
         $stmt->bindValue(':last_name', $_POST['last_name']);
         $stmt->bindValue(':email', $_POST['email']);
-        $stmt->bindValue(':type', "Member");
         $stmt->bindValue(':password', password_hash($_POST["password"], PASSWORD_DEFAULT));
         $stmt->bindValue(':location_id', $_POST['location_id']);
         
-        if( $stmt->execute()){
+        $stmt->execute();
         
-        echo "You have successfully become a member of our gym! Continue back to the home page and sign in!";
             header("location: https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/index.php");
-        } 
+    }
     else
     {
         // Show login page
-        echo "There was an error please try again!";
         
         header("location: https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/sign-up.php");
         
    }
-    }
+    
 ?>
