@@ -69,7 +69,7 @@
                 <h2>easy with our <em>gym</em></h2>
                 <div class="main-button">
    <!--  TODO: need to change it so if the button become member is clicked then it will prompt them to sign in or sign up -->
-                    <a href="#features">Become a member</a>
+                    <a href="sign-up.php">Become a member</a>
                     <a href="index-member.php">Login In 
                     </a>
                  

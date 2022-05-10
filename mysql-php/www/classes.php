@@ -24,6 +24,10 @@ background-image: url('background.png');
   background-attachment: fixed;
   background-size: cover;
 }
+
+.text {
+
+}
 </style>
 </head>
 
@@ -32,23 +36,23 @@ background-image: url('background.png');
 <body class="background">
 
 <div class="container-fluid mt-3 mb-3">
-	<h4>Classes</h4>
+	<h4 style="color: white; font-size:16px">Classes</h4>
 	
-	<h6>Reminder: Check the table below to see if you have already booked a spot in that room! 
+	<h6 style="color: white; font-size:12px">Reminder: Check the table below to see if you have already booked a spot in that room! 
 	If you have already booked the class, the 'Current Class Limit' will not change - please unbook the class if you have already booked that class!</h6>
 
 	<div>
 		<table id="table-classes" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Class ID</th> 
-					<th>Class Name</th>
-					<th>Class Current Limit</th>
-					<th>Class Max Limit</th>
-					<th>Class Length</th>
-					<th>Instructor First Name</th>
-					<th>Instructor Last Name</th>
-					<th>Actions</th>
+					<th style="color: white">Class ID</th> 
+					<th style="color: white">Class Name</th>
+					<th style="color: white">Class Current Limit</th>
+					<th style="color: white">Class Max Limit</th>
+					<th style="color: white">Class Length</th>
+					<th style="color: white">Instructor First Name</th>
+					<th style="color: white">Instructor Last Name</th>
+					<th style="color: white">Actions</th>
 					
 				</tr>
 			</thead>
@@ -59,14 +63,14 @@ background-image: url('background.png');
 <br>
 <br>
 
-<h6>Class That You Have Currently Booked</h6>
+<h6 style="color: white; font-size:12px" >Class That You Have Currently Booked</h6>
 	<div>
 		<table id="table-classes-booked" class="table table-bordered table-striped">
 			<thead>
 				<tr>
-					<th>Class ID</th> 
-					<th>Class Type</th>
-					<th>Class Length</th>
+					<th style="color: white">Class ID</th> 
+					<th style="color: white">Class Type</th>
+					<th style="color: white">Class Length</th>
 				</tr>
 			</thead>
 		</table>
