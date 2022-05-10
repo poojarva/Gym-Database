@@ -33,14 +33,14 @@ if (isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['e
         if( $stmt->execute()){
         
         echo "You have successfully become a member of our gym! Continue back to the home page and sign in!";
-            header("location: https://https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/index.php");
+            header("location: https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/index.php");
         } 
     else
     {
         // Show login page
         echo "There was an error please try again!";
         
-        header("location: https://https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/sign-up.php");
+        header("location: https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/sign-up.php");
         
    }
     }
