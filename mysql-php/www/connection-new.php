@@ -36,7 +36,7 @@ if (!isset($_SESSION['username_id']))
             // Create session variable
            
             // Redirect to URL
-            header("Location: https://https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/index.php");
+            header("Location: https://www.cmsc508.com/~patelp16/508-project-patelp16/mysql-php/www/index.php");
         } else {
             // Password mismatch
             echo "There was an error in the System - Please try again.";
