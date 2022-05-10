@@ -44,7 +44,7 @@
                         <a href="index.html" class="logo"><em>Gym</em></a>
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="#features">Programs</a></li>
+                            <li class="scroll-to-section"><a href="#schedule">Programs</a></li>
                             <li class="scroll-to-section"><a href="#our-halls">Our halls</a></li>
                             <li class="scroll-to-section"><a href="#schedule">Schedules</a></li>
                             <li class="scroll-to-section"><a href="#trainers">Trainers</a></li>

@@ -36,12 +36,12 @@ background-image: url('background.png');
 					</br>
 				</br>
 					<center><p  style="color: white">
-				Use the following credentials:
+				<mark>Use the following credentials:
 				</br>
 				email:  testemployee@gmail.com
 				</br>
 				password: testemployee
-				
+				</mark>
 				</p>
 				</center>
 				</div>

@@ -39,6 +39,7 @@ background-image: url('background.png');
 						</br>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					</br>
+						</br>
 					<center><p  style="color: white">
 				<mark>Don't have an account? </mark>
 				<a href="sign-up.php"><mark>Sign up here</mark></a>

@@ -58,6 +58,7 @@ background-image: url('background.png');
 					<button type="submit" class="btn btn-primary">Submit</button>
 					</br>
 				</div>
+					</br>
 				<center><p  style="color: white">
 				<mark>Already have an account? </mark>
 				<a href="login-member.php"><mark> Login here</mark></a>
