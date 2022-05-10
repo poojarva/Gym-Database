@@ -54,7 +54,9 @@ background-image: url('background.png');
                             ?>
             			</select>
 					</div>
+					</br>
 					<button type="submit" class="btn btn-primary">Submit</button>
+					</br>
 				</div>
 				<center><p  style="color: white">
 				<mark>Already have an account? </mark>

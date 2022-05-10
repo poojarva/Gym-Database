@@ -36,11 +36,13 @@ background-image: url('background.png');
 						<label style="color: white">Password:</label>
 						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
 					</div>
+						</br>
 					<button type="submit" class="btn btn-primary">Submit</button>
-				
+					</br>
 					<center><p  style="color: white">
 				<mark>Don't have an account? </mark>
 				<a href="sign-up.php"><mark>Sign up here</mark></a>
+				
 				</p>
 				</center>
 				</br>
