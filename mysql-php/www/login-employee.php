@@ -22,22 +22,28 @@ background-image: url('background.png');
 	<div class="container mt-3 mb-3">
 		<form method="post">
 			<div class="row justify-content-center">
+			<center>
 				<div class="col-4">
+				</br>
+				</br>
 					<div class="form-group">
 						<mark><label>Email:</label></mark>
 						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required >
 					</div>
+					</br>
+				</br>
 					<div class="form-group">
 						<mark><label>Password:</label></mark>
 						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required >
 					</div>
+					</br>
+				</br>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					</br>
 				</br>
-					</center>
 				</br>
 				</br>
-				<center><p  style="color: white">
+				<p  style="color: white">
 				<mark> 
 				Use the following credentials: 
 				</mark>

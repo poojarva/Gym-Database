@@ -80,86 +80,86 @@
     
 
 
-    <section class="section" id="features">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Choose <em>Program</em></h2>
+<!--     <section class="section" id="features"> -->
+<!--         <div class="container"> -->
+<!--             <div class="row"> -->
+<!--                 <div class="col-lg-6 offset-lg-3"> -->
+<!--                     <div class="section-heading"> -->
+<!--                         <h2>Choose <em>Program</em></h2> -->
                        
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon1.png" alt="program">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Fitness</h4>
-                                <p>Fuel all of your fitness goals here!</p>
-                                <a href="#" class="text-button">More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon2.png" alt="program">
-                            </div>
-                            <div class="right-content">
-                                <h4>New Gym Training</h4>
-                                <p>There is always a new training session here in one of our classes!</p>
-                                <a href="#" class="text-button">More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon3.png" alt="program">
-                            </div>
-                            <div class="right-content">
-                                <h4>Basic Muscle Course</h4>
-                                <p>Join with a friend and choose any class, court, or room to use!</p>
-                                <a href="#" class="text-button">More</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="features-items">
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon4.png" alt="program">
-                            </div>
-                            <div class="right-content">
-                                <h4>Advanced Muscle Course</h4>
-                                <p>Book a whole room with your friends!</p>
-                                <a href="#" class="text-button">More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon5.png" alt="program">
-                            </div>
-                            <div class="right-content">
-                                <h4>Yoga Training</h4>
-                                <p>Join today and book a yoga class!</p>
-                                <a href="#" class="text-button">More</a>
-                            </div>
-                        </li>
-                        <li class="feature-item">
-                            <div class="left-icon">
-                                <img src="assets/images/features-first-icon6.png" alt="program">
-                            </div>
-                            <div class="right-content">
-                                <h4>Body Building Course</h4>
-                                <p>Try a Body Composition class here!</p>
-                                <a href="#" class="text-button">More</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<!--                     </div> -->
+<!--                 </div> -->
+<!--                 <div class="col-lg-6"> -->
+<!--                     <ul class="features-items"> -->
+<!--                         <li class="feature-item"> -->
+<!--                             <div class="left-icon"> -->
+<!--                                 <img src="assets/images/features-first-icon1.png" alt="program"> -->
+<!--                             </div> -->
+<!--                             <div class="right-content"> -->
+<!--                                 <h4>Basic Fitness</h4> -->
+<!--                                 <p>Fuel all of your fitness goals here!</p> -->
+<!--                                 <a href="#" class="text-button">More</a> -->
+<!--                             </div> -->
+<!--                         </li> -->
+<!--                         <li class="feature-item"> -->
+<!--                             <div class="left-icon"> -->
+<!--                                 <img src="assets/images/features-first-icon2.png" alt="program"> -->
+<!--                             </div> -->
+<!--                             <div class="right-content"> -->
+<!--                                 <h4>New Gym Training</h4> -->
+<!--                                 <p>There is always a new training session here in one of our classes!</p> -->
+<!--                                 <a href="#" class="text-button">More</a> -->
+<!--                             </div> -->
+<!--                         </li> -->
+<!--                         <li class="feature-item"> -->
+<!--                             <div class="left-icon"> -->
+<!--                                 <img src="assets/images/features-first-icon3.png" alt="program"> -->
+<!--                             </div> -->
+<!--                             <div class="right-content"> -->
+<!--                                 <h4>Basic Muscle Course</h4> -->
+<!--                                 <p>Join with a friend and choose any class, court, or room to use!</p> -->
+<!--                                 <a href="#" class="text-button">More</a> -->
+<!--                             </div> -->
+<!--                         </li> -->
+<!--                     </ul> -->
+<!--                 </div> -->
+<!--                 <div class="col-lg-6"> -->
+<!--                     <ul class="features-items"> -->
+<!--                         <li class="feature-item"> -->
+<!--                             <div class="left-icon"> -->
+<!--                                 <img src="assets/images/features-first-icon4.png" alt="program"> -->
+<!--                             </div> -->
+<!--                             <div class="right-content"> -->
+<!--                                 <h4>Advanced Muscle Course</h4> -->
+<!--                                 <p>Book a whole room with your friends!</p> -->
+<!--                                 <a href="#" class="text-button">More</a> -->
+<!--                             </div> -->
+<!--                         </li> -->
+<!--                         <li class="feature-item"> -->
+<!--                             <div class="left-icon"> -->
+<!--                                 <img src="assets/images/features-first-icon5.png" alt="program"> -->
+<!--                             </div> -->
+<!--                             <div class="right-content"> -->
+<!--                                 <h4>Yoga Training</h4> -->
+<!--                                 <p>Join today and book a yoga class!</p> -->
+<!--                                 <a href="#" class="text-button">More</a> -->
+<!--                             </div> -->
+<!--                         </li> -->
+<!--                         <li class="feature-item"> -->
+<!--                             <div class="left-icon"> -->
+<!--                                 <img src="assets/images/features-first-icon6.png" alt="program"> -->
+<!--                             </div> -->
+<!--                             <div class="right-content"> -->
+<!--                                 <h4>Body Building Course</h4> -->
+<!--                                 <p>Try a Body Composition class here!</p> -->
+<!--                                 <a href="#" class="text-button">More</a> -->
+<!--                             </div> -->
+<!--                         </li> -->
+<!--                     </ul> -->
+<!--                 </div> -->
+<!--             </div> -->
+<!--         </div> -->
+<!--     </section> -->
 
     <section class="section" id="call-to-action">
         <div class="container">

@@ -33,21 +33,27 @@ background-image: url('background.png');
 		<form method="post">
 			<div class="row justify-content-center">
 				<div class="col-4">
+				</br>
+				</br>
 					<div class="form-group">
 						<mark><label>Email:</label></mark>
 						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" >
 					</div>
+					</br>
+				</br>
 					<div class="form-group">
 						<mark><label>Password:</label></mark>
 						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" >
 					</div>
+					</br>
+				</br>
 					<button type="submit" class="btn btn-primary">Submit</button>
 					</br>
 									</br>
 				
 					<center><p  style="color: white">
 				<mark>Don't have an account? </mark>
-				<button href="sign-up.php">Sign up here</button>
+				 <a href="sign-up.php">Become a member</a>
 				</p>
 				</center>
 				</br>
@@ -62,10 +68,13 @@ background-image: url('background.png');
 				</br>
 				<mark> password: testmember </mark>
 				</p>
-				</center>
+				</br>
+				</br>
 				        <div class="copyright text-center text-white">
             Copyright © 2022
         </div>
+				</center>
+				
 				</div>
 			</div>
 		</form>
