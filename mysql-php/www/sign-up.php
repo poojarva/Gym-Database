@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 						<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required>
 					</div>
 				</div>
-				<div>
+				<div class="form-group">
 						<label>Location ID</label>
 <!-- 					<input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required> -->
 						
@@ -164,10 +164,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             			</select>
             			</div>
             			
-            								<button type="submit" class="btn btn-primary">Submit</button>
+            			<button type="submit" class="btn btn-primary">Submit</button>
             			
             			
-            									<div class="form-group">
+            			<div class="form-group">
 							<input type="submit" class="btn btn-primary" value="Submit"> 
                             <input type="reset" class="btn btn-secondary ml-2" value="Reset">
 						</div>
